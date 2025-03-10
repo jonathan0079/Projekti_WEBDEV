@@ -23,7 +23,7 @@ Back-end API: [http://localhost:3000/api](http://localhost:3000/api)
 
 ## API-dokumentaatio
 
-API-dokumentaatio on saatavilla osoitteessa: [http://localhost:3000/api](http://localhost:3000/api)
+API-dokumentaatio on saatavilla osoitteessa: [API-Dokumentaatio](https://github.com/jonathan0079/Projekti_WEBDEV/blob/main/API-Doc)
 
 API tarjoaa seuraavat päätepisteet:
 - `/api/auth` - Käyttäjien autentikaatio
