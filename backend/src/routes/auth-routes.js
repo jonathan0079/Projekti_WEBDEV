@@ -4,13 +4,13 @@ import { protect } from '../middleware/auth-middleware.js';
 
 const router = express.Router();
 
-// Register user
+// Käyttäjän rekisteröinti
 router.post('/register', register);
 
-// Login user
+// Käyttäjän kirjautuminen
 router.post('/login', login);
 
-// Get current user
+// Nykyisen käyttäjän tiedot ja hakeminen
 router.get('/me', protect, getMe);
 
 export default router;

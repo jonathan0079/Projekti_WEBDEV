@@ -1,10 +1,7 @@
 import promisePool from '../utils/database.js';
 
-/**
- * Tallenna pelitulos tietokantaan
- * @param {object} scoreData - Pelitietojen objekti
- * @returns {number} Lisätyn tuloksen ID
- */
+// Tallentaa pelituloksen tietokantaan
+
 const saveGameScore = async (scoreData) => {
   try {
     const [result] = await promisePool.query(
@@ -17,12 +14,8 @@ const saveGameScore = async (scoreData) => {
   }
 };
 
-/**
- * Hae tuloslista tietylle pelityypille
- * @param {string} gameType - Pelityyppi
- * @param {number} limit - Tulosten maksimimäärä
- * @returns {Array} Tuloslista-tietue
- */
+// Hakee pelin tulokset tietokannasta
+
 const getGameLeaderboard = async (gameType, limit = 10) => {
   try {
     const [rows] = await promisePool.query(
@@ -40,13 +33,8 @@ const getGameLeaderboard = async (gameType, limit = 10) => {
   }
 };
 
-/**
- * Hae käyttäjän tulokset tietylle pelityypille
- * @param {number} userId - Käyttäjän ID
- * @param {string} gameType - Pelityyppi
- * @param {number} limit - Tulosten maksimimäärä
- * @returns {Array} Käyttäjän tulokset
- */
+// Hakee käyttäjän pelitulokset tietokannasta
+
 const getGameScoresByUser = async (userId, gameType, limit = 5) => {
   try {
     const [rows] = await promisePool.query(
@@ -63,12 +51,8 @@ const getGameScoresByUser = async (userId, gameType, limit = 5) => {
   }
 };
 
-/**
- * Hae käyttäjän paras tulos tietylle pelityypille
- * @param {number} userId - Käyttäjän ID
- * @param {string} gameType - Pelityyppi
- * @returns {number} Paras tulos tai 0 jos tuloksia ei löydy
- */
+// Hakee käyttäjän parhaan tuloksen tietokannasta
+
 const getUserHighScore = async (userId, gameType) => {
   try {
     const [rows] = await promisePool.query(

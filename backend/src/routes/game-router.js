@@ -1,7 +1,10 @@
+// Tuodaan Express ja peli-kontrollerin funktiot
+
 import express from 'express';
 import { getLeaderboard, saveScore, getUserScores, getHighScore, apiRoot } from '../controllers/game-controller.js';
 import { protect } from '../middleware/auth-middleware.js';
 
+// Luodaan Express-reititin pelitoiminnoille
 const router = express.Router();
 
 // Root game API endpoint

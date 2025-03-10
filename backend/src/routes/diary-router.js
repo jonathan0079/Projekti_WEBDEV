@@ -1,3 +1,4 @@
+// Tuodaan Express ja tarvittavat kontrollerit
 import express from 'express';
 import { 
   getDiaryEntries, 
@@ -8,17 +9,23 @@ import {
 } from '../controllers/diary-controller.js';
 import { protect } from '../middleware/auth-middleware.js';
 
+// Luodaan Express-reititin
 const router = express.Router();
 
-// Protect all routes
+// Suojataan kaikki päiväkirjareitit - vaaditaan kirjautuminen
 router.use(protect);
 
-// Routes for /api/diary
+// Juuripolun reitit (/api/diary)
+// GET - hae kaikki päiväkirjamerkinnät
+// POST - luo uusi merkintä
 router.route('/')
   .get(getDiaryEntries)
   .post(createDiaryEntry);
 
-// Routes for /api/diary/:id
+// ID-parametrin sisältävät reitit (/api/diary/:id)
+// GET - hae yksittäinen merkintä
+// PUT - päivitä merkintä
+// DELETE - poista merkintä
 router.route('/:id')
   .get(getDiaryEntry)
   .put(updateDiaryEntry)

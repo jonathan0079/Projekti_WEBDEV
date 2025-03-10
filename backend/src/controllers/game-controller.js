@@ -1,10 +1,7 @@
 import { saveGameScore, getGameLeaderboard, getGameScoresByUser, getUserHighScore } from '../models/game-model.js';
 
-/**
- * Hae tuloslista
- * @route GET /api/game/leaderboard
- * @access Public
- */
+// Hakee pelin tulostaulun
+
 const getLeaderboard = async (req, res) => {
   try {
     const gameType = req.query.game_type || 'calorie_clicker';
@@ -26,11 +23,8 @@ const getLeaderboard = async (req, res) => {
   }
 };
 
-/**
- * Tallenna pelitulos
- * @route POST /api/game/scores
- * @access Private
- */
+// Tallentaa käyttäjän tuloksen pelille
+
 const saveScore = async (req, res) => {
   try {
     const userId = req.user.id || req.user.user_id;
@@ -84,11 +78,8 @@ const saveScore = async (req, res) => {
   }
 };
 
-/**
- * Hae käyttäjän tulokset pelille
- * @route GET /api/game/user-scores
- * @access Private
- */
+// Hakee käyttäjän tulokset pelille
+
 const getUserScores = async (req, res) => {
   try {
     const userId = req.user.id || req.user.user_id;
@@ -119,11 +110,8 @@ const getUserScores = async (req, res) => {
   }
 };
 
-/**
- * Hae käyttäjän paras tulos pelille
- * @route GET /api/game/high-score
- * @access Private
- */
+// Hakee käyttäjän parhaan tuloksen pelille
+
 const getHighScore = async (req, res) => {
   try {
     const userId = req.user.id || req.user.user_id;
@@ -156,11 +144,7 @@ const getHighScore = async (req, res) => {
   }
 };
 
-/**
- * Root API testi endpoint
- * @route GET /api/game
- * @access Public
- */
+// Root API endpoint
 const apiRoot = (req, res) => {
   res.json({ 
     message: 'Tervetuloa Peli API:iin',

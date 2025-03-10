@@ -1,11 +1,8 @@
 import promisePool from '../utils/database.js';
 import bcrypt from 'bcrypt';
 
-/**
- * Get user by id
- * @param {number} id - User ID
- * @returns {object} User object without password
- */
+// Hakee käyttäjän id: n perusteella
+
 const getUserById = async (id) => {
   try {
     console.log('Getting user by ID:', id);
@@ -14,11 +11,12 @@ const getUserById = async (id) => {
       [id]
     );
     
-    // Map the database field names to the expected names in the rest of the app
+// Karttaa tietokannan kentät yhdenmukaisuuden vuoksi
+
     if (rows[0]) {
       const user = rows[0];
       return {
-        id: user.user_id,  // Map user_id to id for compatibility
+        id: user.user_id,
         username: user.username,
         email: user.email,
         created_at: user.created_at,
@@ -32,11 +30,8 @@ const getUserById = async (id) => {
   }
 };
 
-/**
- * Get user by username
- * @param {string} username - Username
- * @returns {object} Complete user object including password
- */
+// Hakee käyttäjän käyttäjätunnuksen perusteella
+
 const getUserByUsername = async (username) => {
   try {
     console.log('Getting user by username:', username);
@@ -45,12 +40,13 @@ const getUserByUsername = async (username) => {
       [username]
     );
     
-    // Map database fields for consistency
+// Karttaa tietokannan kentät yhdenmukaisuuden vuoksi
+
     if (rows[0]) {
       const user = rows[0];
       return {
-        id: user.user_id,  // Map user_id to id for compatibility
-        user_id: user.user_id, // Keep original for backward compatibility
+        id: user.user_id,
+        user_id: user.user_id,
         username: user.username,
         password: user.password,
         email: user.email,
@@ -65,14 +61,11 @@ const getUserByUsername = async (username) => {
   }
 };
 
-/**
- * Register a new user
- * @param {object} user - User object with username, password, email
- * @returns {number} Inserted user ID
- */
+// Rekisteröi uuden käyttäjän tietokantaan
+
 const registerUser = async (user) => {
   try {
-    // Hash the password
+    // Hashää salasanan bcryptillä
     const saltRounds = 10;
     const passwordHash = await bcrypt.hash(user.password, saltRounds);
     
@@ -95,43 +88,5 @@ const registerUser = async (user) => {
   }
 };
 
-// Debug function to test database connection
-const testDatabaseConnection = async () => {
-  try {
-    const [result] = await promisePool.query('SELECT 1 as test');
-    console.log('✅ Database connection successful:', result);
-    return true;
-  } catch (error) {
-    console.error('❌ Database connection failed:', error);
-    return false;
-  }
-};
-
-// Test database connection on startup
-testDatabaseConnection();
-
-// Check if the Users table exists and has the right structure
-const checkUsersTable = async () => {
-  try {
-    const [tables] = await promisePool.query('SHOW TABLES LIKE "users"');
-    if (tables.length === 0) {
-      console.error('❌ users table does not exist!');
-      return false;
-    }
-    
-    console.log('✅ users table exists');
-    
-    const [columns] = await promisePool.query('DESCRIBE users');
-    console.log('Table structure:', columns.map(col => `${col.Field} (${col.Type})`));
-    
-    return true;
-  } catch (error) {
-    console.error('❌ Error checking users table:', error);
-    return false;
-  }
-};
-
-// Check Users table on startup
-checkUsersTable();
 
 export { getUserById, getUserByUsername, registerUser };

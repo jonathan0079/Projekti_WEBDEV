@@ -1,10 +1,7 @@
 import { getAllEntries, getEntryById, createEntry, updateEntry, deleteEntry } from '../models/diary-model.js';
 
-/**
- * Get all diary entries for the logged-in user
- * @route GET /api/diary
- * @access Private
- */
+// Hakee kaikki päiväkirjamerkinnät
+
 const getDiaryEntries = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -29,11 +26,8 @@ const getDiaryEntries = async (req, res) => {
   }
 };
 
-/**
- * Get a single diary entry
- * @route GET /api/diary/:id
- * @access Private
- */
+// Hakee yksittäisen päiväkirjamerkinnän
+
 const getDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -65,11 +59,8 @@ const getDiaryEntry = async (req, res) => {
   }
 };
 
-/**
- * Create a new diary entry
- * @route POST /api/diary
- * @access Private
- */
+// Luo uuden päiväkirjamerkinnän
+
 const createDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -78,7 +69,6 @@ const createDiaryEntry = async (req, res) => {
     console.log('Creating new diary entry for user:', userId);
     console.log('Entry data:', { entry_date, mood, weight, sleep_hours });
     
-    // Validate input
     if (!entry_date) {
       return res.status(400).json({
         success: false,
@@ -114,11 +104,8 @@ const createDiaryEntry = async (req, res) => {
   }
 };
 
-/**
- * Update a diary entry
- * @route PUT /api/diary/:id
- * @access Private
- */
+// Päivittää päiväkirjamerkinnän
+
 const updateDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -138,7 +125,6 @@ const updateDiaryEntry = async (req, res) => {
       });
     }
 
-    // Validate input
     if (!entry_date) {
       return res.status(400).json({
         success: false,
@@ -179,11 +165,8 @@ const updateDiaryEntry = async (req, res) => {
   }
 };
 
-/**
- * Delete a diary entry
- * @route DELETE /api/diary/:id
- * @access Private
- */
+// Poistaa päiväkirjamerkinnän
+
 const deleteDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -191,7 +174,8 @@ const deleteDiaryEntry = async (req, res) => {
 
     console.log(`Attempting to delete entry ${entryId} for user ${userId}`);
     
-    // Check if entry exists
+    // Tarkistaa onko merkintä olemassa
+    
     const entry = await getEntryById(entryId, userId);
     if (!entry) {
       console.log(`Entry ${entryId} not found for user ${userId}`);

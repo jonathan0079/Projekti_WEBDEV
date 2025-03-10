@@ -1,10 +1,7 @@
 import promisePool from '../utils/database.js';
 
-/**
- * Get all diary entries for a user
- * @param {number} userId - User ID
- * @returns {Array} Array of diary entries
- */
+//hakee kaikki päiväkirjamerkinnät
+
 const getAllEntries = async (userId) => {
   try {
     const [rows] = await promisePool.query(
@@ -12,10 +9,11 @@ const getAllEntries = async (userId) => {
       [userId]
     );
     
-    // Map entry_id to id for frontend compatibility
+  // karttaa entry_id: n id: ksi frontend-yhteensopivuuden vuoksi
+
     return rows.map(entry => ({
-      id: entry.entry_id,  // Map entry_id to id for frontend
-      entry_id: entry.entry_id, // Keep original for reference
+      id: entry.entry_id,
+      entry_id: entry.entry_id,
       user_id: entry.user_id,
       entry_date: entry.entry_date,
       mood: entry.mood,
@@ -30,12 +28,8 @@ const getAllEntries = async (userId) => {
   }
 };
 
-/**
- * Get a single diary entry
- * @param {number} entryId - Entry ID
- * @param {number} userId - User ID (for verification)
- * @returns {object} Diary entry
- */
+//hakee päiväkirjamerkinnän id: n perusteella
+
 const getEntryById = async (entryId, userId) => {
   try {
     const [rows] = await promisePool.query(
@@ -47,11 +41,10 @@ const getEntryById = async (entryId, userId) => {
       return null;
     }
     
-    // Map entry_id to id for frontend compatibility
     const entry = rows[0];
     return {
-      id: entry.entry_id,  // Map entry_id to id for frontend
-      entry_id: entry.entry_id, // Keep original for reference
+      id: entry.entry_id,
+      entry_id: entry.entry_id,
       user_id: entry.user_id,
       entry_date: entry.entry_date,
       mood: entry.mood,
@@ -66,11 +59,8 @@ const getEntryById = async (entryId, userId) => {
   }
 };
 
-/**
- * Create a new diary entry
- * @param {object} entry - Diary entry object
- * @returns {number} Inserted entry ID
- */
+// Luo uuden päiväkirjamerkinnän
+
 const createEntry = async (entry) => {
   try {
     const [result] = await promisePool.query(
@@ -84,13 +74,8 @@ const createEntry = async (entry) => {
   }
 };
 
-/**
- * Update a diary entry
- * @param {number} entryId - Entry ID
- * @param {object} entry - Updated entry data
- * @param {number} userId - User ID (for verification)
- * @returns {boolean} Success indicator
- */
+// Päivittää päiväkirjamerkinnän
+
 const updateEntry = async (entryId, entry, userId) => {
   try {
     console.log(`Updating entry ${entryId} for user ${userId} with data:`, entry);
@@ -108,12 +93,8 @@ const updateEntry = async (entryId, entry, userId) => {
   }
 };
 
-/**
- * Delete a diary entry
- * @param {number} entryId - Entry ID
- * @param {number} userId - User ID (for verification)
- * @returns {boolean} Success indicator
- */
+// Poistaa päiväkirjamerkinnän
+
 const deleteEntry = async (entryId, userId) => {
   try {
     console.log(`Deleting entry ${entryId} for user ${userId}`);
