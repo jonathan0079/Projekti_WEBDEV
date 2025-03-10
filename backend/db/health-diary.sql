@@ -1,4 +1,5 @@
--- Drop the database if it exists and then create it
+-- tämä luo tietokannan ja taulut, joita käytetään HealthDiary-sovelluksessa
+-- Taulut: Users, DiaryEntries, GameScores
 DROP DATABASE IF EXISTS HealthDiary;
 CREATE DATABASE HealthDiary;
 
