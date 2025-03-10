@@ -1,4 +1,4 @@
-/* Diary page specific styles */
+
 .diary-container {
   width: 100%;
   display: flex;
@@ -12,18 +12,18 @@
 @media (min-width: 1200px) {
   .diary-container {
     flex-direction: row;
-    gap: 60px; /* Increased gap to prevent overlap */
+    gap: 60px;
   }
 }
 
 .diary-form-section {
   flex: 1;
-  min-width: 300px; /* Ensure minimum width */
+  min-width: 300px;
 }
 
 .diary-entries-section {
   flex: 1;
-  min-width: 300px; /* Ensure minimum width */
+  min-width: 300px;
 }
 
 .diary-entries {
@@ -31,14 +31,14 @@
 }
 
 .diary-entry {
-  background-color: rgba(49, 67, 83, 0.95); /* Increased opacity for better readability */
+  background-color: rgba(49, 67, 83, 0.95);
   border-radius: 10px;
-  margin-bottom: 25px; /* Increased spacing between entries */
-  padding: 20px; /* More internal padding */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  margin-bottom: 25px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  word-wrap: break-word; /* Prevents text overflow */
-  overflow: hidden; /* Ensures content stays within borders */
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .diary-entry:hover {
@@ -104,14 +104,14 @@
 .detail-label {
   font-weight: bold;
   margin-right: 10px;
-  min-width: 120px; /* Slightly wider for better alignment */
-  color: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
-  display: inline-block; /* Ensures consistent width */
+  min-width: 120px;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
 }
 
 .detail-value {
   color: #fff;
-  font-size: 15px; /* Slightly larger text */
+  font-size: 15px;
 }
 
 .entry-notes {
@@ -121,16 +121,15 @@
 .entry-notes p {
   margin-top: 5px;
   white-space: pre-line;
-  background-color: rgba(255, 255, 255, 0.2); /* Increased opacity for better contrast */
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 5px;
   color: #fff;
-  font-size: 15px; /* Slightly larger text */
-  line-height: 1.5; /* Better line spacing */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 15px;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Form styles */
 .card h2 {
   text-align: center;
   margin-bottom: 25px;
@@ -140,10 +139,10 @@
   border-bottom: 1px solid rgba(255, 132, 0, 0.3);
 }
 
-/* Notes field specific styles */
+
 .notes-group textarea {
-  min-height: 120px; /* Ensure consistent height */
-  resize: vertical; /* Allow vertical resizing only */
+  min-height: 120px;
+  resize: vertical;
 }
 
 .diary-entry-form {
@@ -151,30 +150,30 @@
 }
 
 .form-group {
-  margin-bottom: 20px; /* Increased spacing between form elements */
-  position: relative; /* For better control of elements */
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px; /* Increased spacing */
+  margin-bottom: 8px;
   font-weight: bold;
   color: #e7e7e7;
-  font-size: 16px; /* Consistent font size */
+  font-size: 16px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 12px; /* Increased padding */
+  padding: 12px;
   border: 1px solid #5a7183;
   border-radius: 5px;
   background-color: rgba(61, 79, 97, 0.7);
   color: #e7e7e7;
   transition: border-color 0.3s;
-  font-size: 15px; /* Consistent font size */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -216,7 +215,7 @@
   cursor: not-allowed;
 }
 
-/* Status message */
+
 #status-message {
   display: none;
   animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
@@ -232,7 +231,6 @@
   to { opacity: 0; transform: translateY(-20px); }
 }
 
-/* Loading indicator */
 .loading-indicator {
   display: flex;
   justify-content: center;

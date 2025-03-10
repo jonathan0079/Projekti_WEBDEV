@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalori Clicker - HyteGym</title>
+    <title>Kaloritreeni - PasaGym</title>
     <style>
-      /* Override styles to ensure text is white and fonts are consistent throughout the game page */
+      /* Lisäsin tyylin tänne, jotta CSS-tiedosto ei olisi niin sekava itselleni */
       .game-container * {
         color: white;
         font-family: 'Verdana', 'Arial', sans-serif;
@@ -19,11 +19,10 @@
         color: white !important;
         font-family: 'Verdana', 'Arial', sans-serif !important;
       }
-      /* Preserve specific font weights and styles */
+
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Verdana', 'Arial', sans-serif !important;
       }
-      /* Add consistent text shadows for better readability on dark backgrounds */
       .game-container p, .game-container h3, .game-container div {
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
       }
@@ -31,10 +30,8 @@
   </head>
   <body>
     <header>
-      <!-- Logo -->
-      <div class="logo">HyteGym</div>
+      <div class="logo">PasaGym</div>
       
-      <!-- Navigation Section -->
       <nav class="nav-section">
         <ul>
           <li><a href="./index.html">Koti</a></li>
@@ -45,12 +42,9 @@
         </ul>
       </nav>
       
-      <!-- User Section -->
       <div class="auth-container">
-        <!-- Login button for guests -->
         <button id="login-button" class="login-button">Kirjaudu sisään</button>
         
-        <!-- User menu for logged-in users -->
         <div id="user-menu-trigger" class="user-menu-trigger" style="display: none;">
           <span id="user-greeting">Hei, käyttäjä!</span>
           <span class="dropdown-icon">▼</span>
@@ -63,27 +57,27 @@
     </header>
 
     <section>
-      <h1>Kalori <span class="highlight">Clicker</span> Peli</h1>
+      <h1>Kaloritreeni<span class="highlight">Peli</span></h1>
       
       <div class="container">
         <div class="game-container">
-          <!-- Game canvas -->
+          <!-- Peli pohja -->
           <canvas id="game-canvas" class="game-canvas" width="600" height="400">
             Selaimesi ei tue Canvas-elementtiä.
           </canvas>
           
-          <!-- Game controls -->
+          <!-- Game ohjaus -->
           <div class="game-controls">
             <button id="start-game" class="game-button">Aloita peli</button>
             <button id="reset-game" class="game-button">Aloita alusta</button>
           </div>
           
-          <!-- Current score -->
+          <!-- Nykyinen pistemäärä -->
           <div class="game-score">
             <h3>Nykyinen pistemäärä: <span id="current-score">0</span></h3>
           </div>
           
-          <!-- Score section -->
+          <!-- Korkeimmat tulokset -->
           <div class="game-score-section">
             <div class="game-score-header">
               <h3>Parhaat pisteet</h3>
@@ -92,13 +86,12 @@
               </div>
             </div>
             
-            <!-- Message for non-logged in users -->
+            <!-- Viesti ei kirjautuneille -->
             <div id="game-score-login-message" style="display: none;">
               <p>Kirjaudu sisään tallentaaksesi pisteet ja nähdäksesi ennätyksesi!</p>
               <button id="login-from-game" class="game-button">Kirjaudu sisään</button>
             </div>
             
-            <!-- Game score container (visible only for logged-in users) -->
             <div id="game-score-container" class="game-score-container">
               <div id="game-leaderboard">
                 <p>Ladataan parhaita pisteitä...</p>

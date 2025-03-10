@@ -1,11 +1,11 @@
-// Calorie Clicker Game
+// Kaloritreeni-pelin toiminnallisuus
 import '../css/game.css';
 import { initGameScores, saveGameScore, checkAndOfferToSaveScore } from './game.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Calorie Clicker game initializing');
   
-  // Initialize the game score system
+// Aloittaa
   initGameScores();
   
   // Game variables
@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   let gameRunning = false;
   let gameScore = 0;
-  let gameTime = 30; // Game duration in seconds
+  let gameTime = 10;
   let gameInterval;
   let foodItems = [];
   
-  // Calorie values and spawn rates for different food types
+// Ruoka-aineet ja niiden ominaisuudet 
   const foodTypes = [
     { name: 'apple', calories: 10, spawnRate: 0.2, color: '#ff0000', radius: 15 },
     { name: 'burger', calories: 50, spawnRate: 0.1, color: '#8B4513', radius: 20 },
@@ -32,34 +32,31 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: 'soda', calories: 30, spawnRate: 0.12, color: '#000000', radius: 17 }
   ];
   
-  // Add click event listener to the login button
+// Lisää tapahtumakuuntelija kirjautumisnappiin pelistä
   if (loginFromGameButton) {
     loginFromGameButton.addEventListener('click', function() {
       document.getElementById('login-button').click();
     });
   }
   
-  // Add click event listener to the save score button
+// Lisää tapahtumakuuntelija tallennusnappiin
   if (saveScoreButton) {
     saveScoreButton.addEventListener('click', function() {
       saveGameScore(gameScore);
     });
   }
   
-  // Game initialization
   function initGame() {
-    // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Reset game variables
     gameScore = 0;
-    gameTime = 30;
+    gameTime = 10;
     foodItems = [];
     
-    // Update score display
+
     currentScoreDisplay.textContent = gameScore;
     
-    // Draw game instructions
+// ohjeet pelin alussa
     ctx.fillStyle = '#FFFFFF';
     ctx.font = '20px Arial';
     ctx.textAlign = 'center';
@@ -68,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.fillText('Paina "Aloita peli" aloittaaksesi!', canvas.width / 2, canvas.height / 2 + 50);
   }
   
-  // Start the game
+ // Aloittaa pelin
   function startGame() {
     if (gameRunning) return;
     
@@ -77,44 +74,44 @@ document.addEventListener('DOMContentLoaded', function() {
     gameTime = 10;
     foodItems = [];
     
-    // Update score display
+// Päivittää pelin pistemäärän
     currentScoreDisplay.textContent = gameScore;
     
-    // Set up game loop
+// Aloittaa pelin loopin
     gameInterval = setInterval(function() {
       updateGame();
       drawGame();
       
-      // Spawn food items randomly
-      if (Math.random() < 0.1) { // 10% chance each frame to spawn a new food
+// Lisää ruoka-aineksia satunnaisesti
+      if (Math.random() < 0.1) {
         spawnFoodItem();
       }
       
-      // Decrease game time
-      gameTime -= 0.02; // Assuming ~50 FPS, this is roughly 1 second
+// Vähentää peliaikaa
+      gameTime -= 0.02;
       
-      // Check if game time is up
+// Peli loppuu kun aika loppuu
       if (gameTime <= 0) {
         endGame();
       }
-    }, 20); // ~50 FPS
+    }, 20);
     
-    // Add click event listener
+// Lisää tapahtumakuuntelija klikkauksille
     canvas.addEventListener('click', handleCanvasClick);
   }
   
-  // End the game
+// Peli loppuu
   function endGame() {
-    // Stop game loop
+// Lopettaa pelin
     clearInterval(gameInterval);
     
-    // Set game state
+// Asettaa pelin lopetetuksi
     gameRunning = false;
     
-    // Remove click event listener
+// Poistaa tapahtumakuuntelijan klikkauksille
     canvas.removeEventListener('click', handleCanvasClick);
     
-    // Display game over screen
+// Näyttää lopputuloksen
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#FFFFFF';
     ctx.font = '30px Arial';
@@ -125,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.font = '18px Arial';
     ctx.fillText('Paina "Aloita alusta" pelataksesi uudelleen', canvas.width / 2, canvas.height / 2 + 50);
     
-    // Only offer to save score if it's positive
+// Tarjoaa tallennusta jos pistemäärä on positiivinen
     if (gameScore > 0) {
       checkAndOfferToSaveScore(gameScore);
     } else {
@@ -133,32 +130,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Update game state
+// Päivittää peliä
   function updateGame() {
-    // Update food items positions (fall down)
+// Liikuttaa ruoka-aineita alaspäin
     for (let i = foodItems.length - 1; i >= 0; i--) {
       const item = foodItems[i];
-      
-      // Move item down
+
       item.y += item.speed;
       
-      // Remove items that have fallen off the bottom
+// Poistaa ruoka-aineet jotka ovat menneet ruudun alapuolelle
       if (item.y > canvas.height + item.radius) {
         foodItems.splice(i, 1);
       }
     }
   }
   
-  // Draw the game
+// Piirtää pelin
   function drawGame() {
-    // Clear canvas
+// Tyhjentää canvasin
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Draw background
+// Piirtää taustan
     ctx.fillStyle = 'rgba(49, 67, 83, 0.5)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Draw food items
+// Piirtää ruoka-aineet
     for (const item of foodItems) {
       ctx.beginPath();
       ctx.arc(item.x, item.y, item.radius, 0, Math.PI * 2);
@@ -167,20 +163,19 @@ document.addEventListener('DOMContentLoaded', function() {
       ctx.closePath();
     }
     
-    // Draw game info
+// piiirtää pistemäärän ja ajan
     ctx.fillStyle = '#FFFFFF';
     ctx.font = '18px Arial';
     ctx.textAlign = 'left';
     ctx.fillText(`Pisteet: ${gameScore}`, 10, 30);
     
-    // Draw timer
     ctx.textAlign = 'right';
     ctx.fillText(`Aika: ${Math.max(0, Math.ceil(gameTime))}s`, canvas.width - 10, 30);
   }
   
-  // Spawn a new food item
+// Lisää ruoka-aineen
   function spawnFoodItem() {
-    // Randomly select a food type based on spawn rates
+// Valitsee satunnaisen ruoka-aineen
     let random = Math.random();
     let selectedFood = null;
     let totalRate = 0;
@@ -193,81 +188,80 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // If no food was selected (shouldn't happen), pick the first one
+// Jos ei valittua ruoka-ainesta, valitsee ensimmäisen
     if (!selectedFood) {
       selectedFood = foodTypes[0];
     }
     
-    // Create a new food item
+// Luo uuden ruoka-aineen
     const newItem = {
-      x: Math.random() * (canvas.width - 40) + 20, // Random x position
-      y: -20, // Start above the canvas
+      x: Math.random() * (canvas.width - 40) + 20,
+      y: -20,
       radius: selectedFood.radius,
       color: selectedFood.color,
       calories: selectedFood.calories,
       name: selectedFood.name,
-      speed: 2 + Math.random() * 3 // Random speed between 2 and 5
+      speed: 2 + Math.random() * 3
     };
     
-    // Adjust calories based on food type (healthy foods give positive points, unhealthy foods negative)
+// Asettaa kalorit positiivisiksi tai negatiivisiksi riippuen ruoka-aineesta
     if (newItem.name === 'apple' || newItem.name === 'salad') {
-      newItem.calories = Math.abs(newItem.calories); // Positive
+      newItem.calories = Math.abs(newItem.calories);
     } else {
-      newItem.calories = -Math.abs(newItem.calories); // Negative
+      newItem.calories = -Math.abs(newItem.calories);
     }
     
-    // Add to food items array
+// Lisää ruoka-aineen listaan
     foodItems.push(newItem);
   }
   
-  // Handle canvas click events
+// Käsittelee klikkauksia
   function handleCanvasClick(event) {
-    // Get click coordinates relative to canvas
+// Laskee klikkauksen sijainnin canvasissa
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     
-    // Check if a food item was clicked
+// Käy läpi kaikki ruoka-aineet ja tarkistaa onko klikkaus osunut niihin
     for (let i = foodItems.length - 1; i >= 0; i--) {
       const item = foodItems[i];
       
-      // Calculate distance from click to item center
+// Laskee klikkauksen ja ruoka-aineen etäisyyden
       const distance = Math.sqrt(
         Math.pow(x - item.x, 2) + Math.pow(y - item.y, 2)
       );
       
-      // If click is within item radius, it's a hit
+// Jos klikkaus osuu ruoka-aineeseen
       if (distance <= item.radius) {
-        // Add/subtract calories to score
+// Lisää tai vähentää pisteitä ruoka-aineen kalorien mukaan
         gameScore += item.calories;
         
-        // Update score display
+// Päivittää pistemäärän
         currentScoreDisplay.textContent = gameScore;
         
-        // Remove the clicked item
+// Poistaa ruoka-aineen listasta
         foodItems.splice(i, 1);
         
-        // Only handle one item per click
+// Siirtyy seuraavaan ruoka-aineeseen
         break;
       }
     }
   }
   
-  // Add event listeners to buttons
+// Lisää tapahtumakuuntelijat
   startButton.addEventListener('click', startGame);
   
   resetButton.addEventListener('click', function() {
-    // Stop current game if running
+// Lopettaa pelin jos se on käynnissä
     if (gameRunning) {
       clearInterval(gameInterval);
       gameRunning = false;
       canvas.removeEventListener('click', handleCanvasClick);
     }
     
-    // Initialize new game
+// Alustaa pelin
     initGame();
   });
-  
-  // Initialize the game on page load
+
   initGame();
 });

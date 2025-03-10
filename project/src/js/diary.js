@@ -1,25 +1,20 @@
-// Fixed Diary.js implementation for the HealthDiary application
-// Properly handles creating, updating, and deleting diary entries
-
-// IMPORTANT: Correct URL format with protocol and hostname
 const API_URL = 'http://localhost:3000/api';
 
-/**
- * Diary functionality
- */
+// päiväkirja toiminnallisuus
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Diary script loaded');
   console.log('API URL is set to:', API_URL);
   
-  // Check if user is logged in
+// Tarkistaa onko käyttäjä kirjautunut
   if (!isAuthenticated()) {
     console.log('User not authenticated, redirecting to home page');
-    // Redirect to home page if not logged in
+// Jos käyttäjä ei ole kirjautunut, ohjaa takaisin etusivulle
     window.location.href = 'index.html';
     return;
   }
 
-  // Get DOM elements
+ // DOM-elementit
   const diaryEntriesContainer = document.getElementById('diary-entries');
   const diaryForm = document.getElementById('diary-form');
   const entryDateInput = document.getElementById('entry-date');
@@ -31,20 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const formTitle = document.getElementById('form-title');
   const resetFormButton = document.getElementById('reset-form');
 
-  // Set default date to today
+// Aseta nykyinen päivämäärä lomakkeelle
   const today = new Date().toISOString().split('T')[0];
   entryDateInput.value = today;
 
-  // Variable to store current entry ID when editing
+// Aseta nykyinen käyttäjä lomakkeelle
   window.currentEntryId = null;
 
-  // Load diary entries on page load
+// Lataa päiväkirjamerkinnät
   loadDiaryEntries();
 
-  // Handle diary form submission
+// Lisää lomakkeen tapahtumakuuntelija
   diaryForm.addEventListener('submit', handleDiarySubmit);
   
-  // Add reset button functionality
+// Lisää nollauspainikkeen tapahtumakuuntelija
   if (resetFormButton) {
     resetFormButton.addEventListener('click', (e) => {
       e.preventDefault();
@@ -52,20 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /**
-   * Load diary entries from API
-   */
+// Lataa päiväkirjamerkinnät palvelimelta 
   function loadDiaryEntries() {
     try {
-      // Show loading indicator
+// Näytä latausindikaattori
       diaryEntriesContainer.innerHTML = '<div class="loading-indicator"></div>';
 
-      // Build the full diary entries URL
+// Päiväkirjan URL-osoite
       const diaryUrl = `${API_URL}/diary`;
       console.log('Loading diary entries from:', diaryUrl);
       console.log('Auth token:', getAuthToken()?.substring(0, 20) + '...');
 
-      // Make the fetch request
+// Lähetä pyyntö palvelimelle
       fetch(diaryUrl, {
         method: 'GET',
         headers: {
@@ -73,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       })
       .then(response => {
-        // Log the response status for debugging
+// Näytä vastauksen tila konsolissa
         console.log('Response status:', response.status);
         
         if (!response.ok) {
@@ -84,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         console.log('Diary entries loaded:', data);
 
-        // Clear container
+// Tyhjennä päiväkirjamerkinnät
         diaryEntriesContainer.innerHTML = '';
 
         if (!data.data || data.data.length === 0) {
@@ -92,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
           return;
         }
 
-        // Create entries
+// lisää entryt HTML:ään
         data.data.forEach(entry => {
           const entryElement = createEntryElement(entry);
           diaryEntriesContainer.appendChild(entryElement);
@@ -102,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error loading diary entries:', error);
         diaryEntriesContainer.innerHTML = '<p>Virhe merkintöjen latauksessa. Yritä myöhemmin uudelleen.</p>';
         
-        // If the error is related to authentication, redirect to login
+// Tarkista virheviestistä, onko kyseessä autentikointivirhe
         if (error.message && (error.message.includes('401') || error.message.includes('403'))) {
           console.log('Authentication error, clearing token and redirecting');
           localStorage.removeItem('user');
@@ -115,11 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  /**
-   * Create HTML element for a diary entry
-   */
+// Luo HTML-elementin päiväkirjamerkinnälle
+
   function createEntryElement(entry) {
-    // Format date
+// Muunna päivämäärä luettavaan muotoon
     const date = new Date(entry.entry_date);
     const formattedDate = date.toLocaleDateString('fi-FI', {
       weekday: 'long',
@@ -128,24 +120,23 @@ document.addEventListener('DOMContentLoaded', function() {
       day: 'numeric'
     });
 
-    // Create entry element
+// Luo div-elementti merkinnälle
     const entryElement = document.createElement('div');
     entryElement.className = 'diary-entry';
     entryElement.dataset.id = entry.id;
 
-    // Parse JSON notes to extract workout data if available
+// Tarkista onko merkinnässä treenidataa (EI KÄYTETTY)
     let workoutData = null;
     if (entry.notes && typeof entry.notes === 'string' && entry.notes.includes('"activityType"')) {
       try {
         workoutData = JSON.parse(entry.notes);
-        // Display main notes in a readable format
+
         entry.notes = workoutData.notes || '';
       } catch (e) {
         console.log('Failed to parse workout data from notes:', e);
       }
     }
 
-    // Basic entry HTML
     let entryHTML = `
       <div class="entry-header">
         <h3>${formattedDate}</h3>
@@ -168,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="detail-value">${entry.sleep_hours ? entry.sleep_hours + ' tuntia' : 'Ei määritelty'}</span>
         </div>`;
 
-    // Add workout data if available
+// Lisää treenidata, jos sitä on saatavilla (EI KÄYTETTY)
     if (workoutData) {
       entryHTML += `
         <div class="workout-summary">
@@ -194,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>`;
     }
 
-    // Add notes section
+// Lisää muistiinpanot
     entryHTML += `
         <div class="entry-notes">
           <span class="detail-label">Muistiinpanot:</span>
@@ -205,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     entryElement.innerHTML = entryHTML;
 
-    // Add event listeners
+// Lisää tapahtumakuuntelijat muokkaus- ja poistopainikkeille
     const editButton = entryElement.querySelector('.edit-button');
     const deleteButton = entryElement.querySelector('.delete-button');
 
@@ -220,27 +211,25 @@ document.addEventListener('DOMContentLoaded', function() {
     return entryElement;
   }
 
-  /**
-   * Handle diary form submission
-   */
+// Käsittele päiväkirjalomakkeen lähetys
   function handleDiarySubmit(e) {
     e.preventDefault();
     console.log('Diary form submitted');
 
-    // Get form values
+// Hae lomakkeen tiedot
     const entryDate = entryDateInput.value;
     const mood = moodInput.value;
     const weight = weightInput.value;
     const sleepHours = sleepHoursInput.value;
     let notes = notesInput.value;
 
-    // Validate required fields
+// Tarkista pakolliset kentät
     if (!entryDate) {
       alert('Päivämäärä on pakollinen kenttä!');
       return;
     }
 
-    // Prepare data
+// Lähetä merkintä palvelimelle
     const entryData = {
       entry_date: entryDate,
       mood: mood,
@@ -252,18 +241,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Entry data:', entryData);
     console.log('Current entry ID:', window.currentEntryId);
 
-    // Show loading state
+// Poista mahdollinen tyhjä merkintä ID:stä
     submitButton.disabled = true;
     submitButton.textContent = window.currentEntryId ? 'Päivitetään...' : 'Tallennetaan...';
 
     let url, method;
     if (window.currentEntryId) {
-      // Update existing entry
+// Päivitä olemassa oleva merkintä
       url = `${API_URL}/diary/${window.currentEntryId}`;
       method = 'PUT';
       console.log('Updating diary entry at:', url);
     } else {
-      // Create new entry
+// Luo uusi merkintä
       url = `${API_URL}/diary`;
       method = 'POST';
       console.log('Creating new diary entry at:', url);
@@ -289,13 +278,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       console.log('Response data:', data);
       
-      // Show success message
+// Näytä onnistumisviesti
       showMessage(window.currentEntryId ? 'Merkintä päivitetty onnistuneesti' : 'Merkintä luotu onnistuneesti', 'success');
       
-      // Reset form
+// Tyhjennä lomake
       resetForm();
       
-      // Reload entries
+// Lataa päiväkirjamerkinnät uudelleen
       loadDiaryEntries();
     })
     .catch(error => {
@@ -303,25 +292,24 @@ document.addEventListener('DOMContentLoaded', function() {
       showMessage('Virhe: ' + error.message, 'error');
     })
     .finally(() => {
-      // Reset button state
+// Ota tallennuspainike takaisin käyttöön
       submitButton.disabled = false;
       submitButton.textContent = window.currentEntryId ? 'Päivitä merkintä' : 'Tallenna merkintä';
     });
   }
 
-  /**
-   * Edit diary entry
-   */
+// Muokkaa päiväkirjamerkintää
+
   function editEntry(entry) {
     console.log('Editing entry:', entry);
     
-    // Set form values
+// Täytä lomake merkinnän tiedoilla
     entryDateInput.value = entry.entry_date.split('T')[0]; // Format YYYY-MM-DD
     moodInput.value = entry.mood || '';
     weightInput.value = entry.weight || '';
     sleepHoursInput.value = entry.sleep_hours || '';
     
-    // Try to parse JSON workout data from notes
+// Tarkista onko merkinnässä treenidataa (EI KÄYTETTY)
     let workoutData = null;
     if (entry.notes && entry.notes.includes('"activityType"')) {
       try {
@@ -335,29 +323,27 @@ document.addEventListener('DOMContentLoaded', function() {
       notesInput.value = entry.notes || '';
     }
 
-    // Change form title and button text
+// Vaihda lomakkeen otsikko ja painikkeen teksti
     formTitle.textContent = 'Muokkaa merkintää';
     submitButton.textContent = 'Päivitä merkintä';
 
-    // Store entry ID
+// Tallenna muokattavan merkinnän ID
     window.currentEntryId = entry.id;
 
-    // Scroll to form
+// Vieritä lomake näkyviin
     diaryForm.scrollIntoView({ behavior: 'smooth' });
   }
 
-  /**
-   * Delete diary entry
-   */
+// Poistaa päiväkirjamerkintä
   function deleteEntry(id) {
-    // Confirm deletion
+// Kysyy varmistusta ennen poistoa
     if (!confirm('Haluatko varmasti poistaa tämän merkinnän?')) {
       return;
     }
 
     console.log('Deleting entry with ID:', id);
     
-    // Show loading or disable buttons
+// Poistaa merkinnän palvelimelta 
     const deleteButton = document.querySelector(`.delete-button[data-id="${id}"]`);
     if (deleteButton) {
       deleteButton.disabled = true;
@@ -372,10 +358,9 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => {
       console.log('Delete response status:', response.status);
-      
-      // Always try to parse JSON response, but don't fail if it's not JSON
+//Parseetaan vastaus JSON-muotoon
       return response.json().catch(() => {
-        // If not JSON, create a simple object with success based on status
+// Jos vastaus ei ole JSON-muodossa, palauta tyhjä objekti
         return { success: response.ok };
       }).then(data => {
         if (!response.ok) {
@@ -387,22 +372,22 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       console.log('Delete successful:', data);
       
-      // Show success message
+// Näytä onnistumisviesti
       showMessage('Merkintä poistettu onnistuneesti', 'success');
       
-      // Reset form if editing the deleted entry
+// Tyhjennä lomake, jos poistettu merkintä on muokattavana
       if (window.currentEntryId === id) {
         resetForm();
       }
       
-      // Reload entries
+// Lataa päiväkirjamerkinnät uudelleen
       loadDiaryEntries();
     })
     .catch(error => {
       console.error('Error deleting entry:', error);
       showMessage('Virhe poistettaessa: ' + error.message, 'error');
       
-      // Re-enable delete button
+// Ota poistopainike takaisin käyttöön
       if (deleteButton) {
         deleteButton.disabled = false;
         deleteButton.textContent = 'Poista';
@@ -410,29 +395,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /**
-   * Reset diary form
-   */
+// Nollaa lomake
+
   function resetForm() {
-    // Reset form
+// Tyhjennä lomake
     diaryForm.reset();
 
-    // Set date to today
+// Aseta nykyinen päivämäärä lomakkeelle
     entryDateInput.value = today;
 
-    // Reset form title and button text
+// Vaihda lomakkeen otsikko ja painikkeen teksti
     formTitle.textContent = 'Lisää uusi merkintä';
     submitButton.textContent = 'Tallenna merkintä';
 
-    // Reset entry ID
+// Tyhjennä muokattavan merkinnän ID
     window.currentEntryId = null;
   }
 
-  /**
-   * Show message to user
-   */
+// Näytä viesti käyttäjälle
+
   function showMessage(message, type = 'info') {
-    // Create message element if it doesn't exist
+// Etsii tai luo viestielementin
     let messageElement = document.getElementById('status-message');
     if (!messageElement) {
       messageElement = document.createElement('div');
@@ -447,10 +430,10 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.appendChild(messageElement);
     }
 
-    // Set message content and style
+// Aseta viestin sisältö ja tyyli
     messageElement.textContent = message;
     
-    // Set color based on message type
+// Aseta viestin tyyli tyypin mukaan
     if (type === 'error') {
       messageElement.style.backgroundColor = '#f44336';
       messageElement.style.color = 'white';
@@ -462,17 +445,17 @@ document.addEventListener('DOMContentLoaded', function() {
       messageElement.style.color = 'white';
     }
 
-    // Show message with animation
+// Näyttä viesti ja animoi sen
     messageElement.style.display = 'block';
     messageElement.style.animation = 'fadeIn 0.3s, fadeOut 0.3s 2.7s';
 
-    // Hide message after 3 seconds
+// Piilotta viestin automaattisesti
     setTimeout(() => {
       messageElement.style.display = 'none';
     }, 3000);
   }
 
-  // Make functions available globally
+// Lisää funktiot globaaliin nimipohjaan
   window.loadDiaryEntries = loadDiaryEntries;
   window.resetForm = resetForm;
   window.showMessage = showMessage;
@@ -480,9 +463,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.deleteEntry = deleteEntry;
 });
 
-/**
- * Get authentication token from localStorage
- */
+// Hae käyttäjän token localStoragesta 
+
 function getAuthToken() {
   try {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -493,9 +475,8 @@ function getAuthToken() {
   }
 }
 
-/**
- * Check if user is authenticated
- */
+// Tarkista onko käyttäjä kirjautunut
+
 function isAuthenticated() {
   return getAuthToken() !== null;
 }

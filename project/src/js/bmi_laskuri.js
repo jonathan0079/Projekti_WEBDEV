@@ -1,3 +1,4 @@
+// BMI-laskurin toiminnallisuus
 document.getElementById('laske-bmi').addEventListener('click', function() {
     const weight = parseFloat(document.getElementById('paino').value);
     const height = parseFloat(document.getElementById('pituus').value) / 100;
