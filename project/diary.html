@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terveyspäiväkirja - HyteGym</title>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <div class="logo">HyteGym</div>
+      
+      <!-- navigaatio -->
+      <nav class="nav-section">
+        <ul>
+          <li><a href="./index.html">Koti</a></li>
+          <li><a href="./laskuri.html">Painoindeksi laskuri</a></li>
+          <li id="diary-nav-link"><a href="./diary.html">Päiväkirja</a></li>
+          <li><a href="./index.html">Kaloritreeni</a></li>
+          <li><a href="./about.html">Tietoja</a></li>
+        </ul>
+      </nav>
+      
+      <!-- User Section -->
+      <div class="auth-container">
+        <!-- Login button for guests -->
+        <button id="login-button" class="login-button">Kirjaudu sisään</button>
+        
+        <!-- User menu for logged-in users -->
+        <div id="user-menu-trigger" class="user-menu-trigger" style="display: none;">
+          <span id="user-greeting">Hei, käyttäjä!</span>
+          <span class="dropdown-icon">▼</span>
+          <div id="user-menu-content" class="user-menu-content">
+            <a href="./diary.html">Päiväkirja</a>
+            <a href="#" id="logout-button">Kirjaudu ulos</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h1>Terveytesi <span class="highlight">päiväkirja</span></h1>
+      
+      <div class="container">
+        <div class="diary-container">
+          <div class="diary-form-section">
+            <div class="card">
+              <h2 id="form-title">Lisää uusi merkintä</h2>
+              
+              <form id="diary-form" class="diary-entry-form">
+                <div class="form-group">
+                  <label for="entry-date">Päivämäärä:</label>
+                  <input type="date" id="entry-date" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="mood">Mieliala:</label>
+                  <select id="mood">
+                    <option value="">Valitse mieliala</option>
+                    <option value="Iloinen">Iloinen</option>
+                    <option value="Energinen">Energinen</option>
+                    <option value="Rentoutunut">Rentoutunut</option>
+                    <option value="Neutraali">Neutraali</option>
+                    <option value="Väsynyt">Väsynyt</option>
+                    <option value="Stressaantunut">Stressaantunut</option>
+                    <option value="Surullinen">Surullinen</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="weight">Paino (kg):</label>
+                  <input type="number" id="weight" step="0.1" min="0" placeholder="Paino kilogrammoissa">
+                </div>
+                
+                <div class="form-group">
+                  <label for="sleep-hours">Uni (tuntia):</label>
+                  <input type="number" id="sleep-hours" step="0.5" min="0" max="24" placeholder="Unitunnit">
+                </div>
+                
+                <div class="form-group notes-group">
+                  <label for="notes">Muistiinpanot:</label>
+                  <textarea id="notes" rows="6" placeholder="Kirjoita tähän päivän muistiinpanot..."></textarea>
+                </div>
+                
+                <div class="form-buttons">
+                  <button type="submit" id="submit-entry" class="form-button">Tallenna merkintä</button>
+                  <button type="button" id="reset-form" class="form-button secondary">Tyhjennä</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="diary-entries-section">
+            <h2>Päiväkirjamerkinnät</h2>
+            <div id="diary-entries" class="diary-entries">
+              <p>Ladataan merkintöjä...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="jaloittaja">
+        <p>Copyright. Sinä</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close-modal">&times;</span>
+        
+        <div class="modal-tabs">
+          <div id="login-tab" class="modal-tab active">Kirjaudu sisään</div>
+          <div id="register-tab" class="modal-tab">Rekisteröidy</div>
+        </div>
+        
+        <form id="login-form" class="modal-form active">
+          <div class="form-group">
+            <label for="login-username">Käyttäjänimi:</label>
+            <input type="text" id="login-username" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="login-password">Salasana:</label>
+            <input type="password" id="login-password" required>
+          </div>
+          
+          <p id="login-error" class="login-error"></p>
+          
+          <button type="submit" class="form-button">Kirjaudu sisään</button>
+        </form>
+        
+        <form id="register-form" class="modal-form">
+          <div class="form-group">
+            <label for="register-username">Käyttäjänimi:</label>
+            <input type="text" id="register-username" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-email">Sähköposti:</label>
+            <input type="email" id="register-email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-password">Salasana:</label>
+            <input type="password" id="register-password" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-confirm-password">Vahvista salasana:</label>
+            <input type="password" id="register-confirm-password" required>
+          </div>
+          
+          <p id="register-error" class="login-error"></p>
+          
+          <button type="submit" class="form-button">Rekisteröidy</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/index.js"></script>
+    <script type="module" src="/src/js/auth-client.js"></script>
+    <script type="module" src="/src/js/diary.js"></script>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - HyteGym</title>
+    <style>
+      /* Additional styles for the map */
+      #map-container {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 20px 0;
+      }
+      
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .gym-info {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+      }
+      
+      .gym-location {
+        background: rgba(49, 67, 83, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #ff8400;
+      }
+      
+      .gym-location h4 {
+        margin-top: 0;
+        color: #ff8400;
+      }
+      
+      .gym-address {
+        margin-bottom: 10px;
+      }
+      
+      .gym-hours {
+        font-size: 0.9em;
+      }
+      
+      .view-on-map {
+        background: linear-gradient(45deg, rgba(0, 255, 34, 0.7), #ff8400);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <div class="logo">HyteGym</div>
+      
+      <!-- Navigation Section -->
+      <nav class="nav-section">
+        <ul>
+          <li><a href="./index.html">Koti</a></li>
+          <li><a href="./laskuri.html">Painoindeksi laskuri</a></li>
+          <li id="diary-nav-link" style="display: none;"><a href="./diary.html">Päiväkirja</a></li>
+          <li><a href="./peli.html">Kaloritreeni</a></li>
+          <li><a href="./about.html">Tietoja</a></li>
+        </ul>
+      </nav>
+      
+      <!-- User Section -->
+      <div class="auth-container">
+        <!-- Login button for guests -->
+        <button id="login-button" class="login-button">Kirjaudu sisään</button>
+        
+        <!-- User menu for logged-in users -->
+        <div id="user-menu-trigger" class="user-menu-trigger" style="display: none;">
+          <span id="user-greeting">Hei, käyttäjä!</span>
+          <span class="dropdown-icon">▼</span>
+          <div id="user-menu-content" class="user-menu-content">
+            <a href="./diary.html">Päiväkirja</a>
+            <a href="#" id="logout-button">Kirjaudu ulos</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h1>Tietoja <span class="highlight">HyteGym</span> kuntosaliketjusta</h1>
+      
+      <div class="container">
+        <div class="card">
+          <h2>Mikä?</h2>
+          
+          <p>HyteGym on modernien kuntosalien verkosto, joka tarjoaa laadutonta treeniympäristöä ja kokonaisvaltaista hyvinvointia. Saleillamme yhdistyvät aliluokkaiset laitteet, amatööri ohjaus ja motivoivaton yhteisö. Tarjoamme jäsenillemme:</p>
+          
+          <ul style="text-align: left; margin: 20px 0;">
+            <li>käytetyt, kunnostamatta jätetyt kuntosalilaitteet ja rikkinäiset painot</li>
+            <li>Ryhmäliikuntatunnit joka ikinen päivä</li>
+            <li>Henkilökohtainen valmennus ja ravintoneuvonta (maksetaan erikseen)</li>
+            <li>Homeiset saunatilat ja huonoinvointialue</li>
+            <li>Digitaalinen treeninseuranta toimimattoman nettisivun kautta</li>
+          </ul>
+          
+          <p>Salimme ovat avoinna 24/7, joten voit treenata juuri silloin kun sinulle sopii!</p>
+          
+          <h3>Löydä lähin HyteGym</h3>
+          
+          <!-- Google Maps container -->
+          <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2287548.5741527895!2d-29.56498901983154!3d37.64309152331664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfi!2sfi!4v1741547068773!5m2!1sfi!2sfi" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="map"></div>
+          </div>
+          
+          <!-- Gym locations -->
+          <div class="gym-info">
+            <div class="gym-location" data-lat="60.1695" data-lng="24.9354">
+              <h4>HyteGym Kouvola</h4>
+              <div class="gym-address">tää mesta 29, 45100 Kouvola</div>
+              <div class="gym-hours">Avoinna 24/7</div>
+              <button class="view-on-map" onclick="centerMap(60.1695, 24.9354)">Näytä kartalla</button>
+            </div>
+            
+            <div class="gym-location" data-lat="60.2169" data-lng="24.8319">
+              <h4>HyteGym Pohjois-Leppävaara</h4>
+              <div class="gym-address">tuolla 3-9, 02600 Espoo</div>
+              <div class="gym-hours">Avoinna 24/7</div>
+              <button class="view-on-map" onclick="centerMap(60.2169, 24.8319)">Näytä kartalla</button>
+            </div>
+            
+            <div class="gym-location" data-lat="60.2971" data-lng="25.0444">
+              <h4>HyteGym Kontula</h4>
+              <div class="gym-address">toi paikka 3, 00940 Helsinki</div>
+              <div class="gym-hours">Avoinna 24/7</div>
+              <button class="view-on-map" onclick="centerMap(60.2971, 25.0444)">Näytä kartalla</button>
+            </div>
+          </div>
+          
+          <h3>Älä Ota yhteyttä</h3>
+          <p>Asiakaspalvelu: <strong>älä.puhuMULLE@hytegym.fi</strong> | Puh: <strong>012 345 678</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="jaloittaja">
+        <p>Copyright. Sinä</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close-modal">&times;</span>
+        
+        <div class="modal-tabs">
+          <div id="login-tab" class="modal-tab active">Kirjaudu sisään</div>
+          <div id="register-tab" class="modal-tab">Rekisteröidy</div>
+        </div>
+        
+        <form id="login-form" class="modal-form active">
+          <div class="form-group">
+            <label for="login-username">Käyttäjänimi:</label>
+            <input type="text" id="login-username" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="login-password">Salasana:</label>
+            <input type="password" id="login-password" required>
+          </div>
+          
+          <p id="login-error" class="login-error"></p>
+          
+          <button type="submit" class="form-button">Kirjaudu sisään</button>
+        </form>
+        
+        <form id="register-form" class="modal-form">
+          <div class="form-group">
+            <label for="register-username">Käyttäjänimi:</label>
+            <input type="text" id="register-username" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-email">Sähköposti:</label>
+            <input type="email" id="register-email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-password">Salasana:</label>
+            <input type="password" id="register-password" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="register-confirm-password">Vahvista salasana:</label>
+            <input type="password" id="register-confirm-password" required>
+          </div>
+          
+          <p id="register-error" class="login-error"></p>
+          
+          <button type="submit" class="form-button">Rekisteröidy</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Google Maps API -->
+    <script>
+      let map;
+      let markers = [];
+      
+      function initMap() {
+        // Helsinki coordinates (center of the map)
+        const helsinkiCenter = { lat: 60.1695, lng: 24.9354 };
+        
+        // Create map
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 11,
+          center: helsinkiCenter,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          styles: [
+            {
+              featureType: "all",
+              elementType: "geometry",
+              stylers: [{ saturation: -80 }]
+            },
+            {
+              featureType: "all",
+              elementType: "labels.text.fill",
+              stylers: [{ color: "#ffffff" }]
+            }
+          ]
+        });
+        
+        // Add markers for each gym location
+        addGymMarkers();
+      }
+      
+      function addGymMarkers() {
+        const gymLocations = document.querySelectorAll('.gym-location');
+        
+        gymLocations.forEach(gym => {
+          const lat = parseFloat(gym.dataset.lat);
+          const lng = parseFloat(gym.dataset.lng);
+          const title = gym.querySelector('h4').innerText;
+          
+          const marker = new google.maps.Marker({
+            position: { lat, lng },
+            map: map,
+            title: title,
+            icon: {
+              url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+            }
+          });
+          
+          // Add info window with gym details
+          const infoContent = `
+            <div style="color: #333; padding: 5px;">
+              <strong>${title}</strong><br>
+              ${gym.querySelector('.gym-address').innerText}<br>
+              ${gym.querySelector('.gym-hours').innerText}
+            </div>
+          `;
+          
+          const infoWindow = new google.maps.InfoWindow({
+            content: infoContent
+          });
+          
+          marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+          });
+          
+          markers.push(marker);
+        });
+      }
+      
+      function centerMap(lat, lng) {
+        if (map) {
+          map.setCenter({ lat, lng });
+          map.setZoom(15);
+          
+          // Find and open the info window for this marker
+          markers.forEach(marker => {
+            if (marker.getPosition().lat() === lat && marker.getPosition().lng() === lng) {
+              google.maps.event.trigger(marker, 'click');
+            }
+          });
+        }
+      }
+    </script> // en omista avainta, enkä halua maksaa pyynnöistä, joten tässä on placeholder
+    <script src="https://maps.googleapis.com/maps/api/js?key=API-avain, jota en omista&callback=initMap" async defer></script>
+
+    <script type="module" src="/src/js/index.js"></script>
+    <script type="module" src="/src/js/auth-client.js"></script>
+  </body>
+</html>
