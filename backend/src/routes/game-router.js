@@ -7,10 +7,10 @@ const router = express.Router();
 // Root game API endpoint
 router.get('/', apiRoot);
 
-// Public route to get leaderboard
+// Public reitti päästääkseen leaderboardiin
 router.get('/leaderboard', getLeaderboard);
 
-// Protected routes - require authentication
+// suojatut reitit - vaativat autentikaation
 router.post('/scores', protect, saveScore);
 router.get('/user-scores', protect, getUserScores);
 router.get('/high-score', protect, getHighScore);
