@@ -1,9 +1,9 @@
 import promisePool from '../utils/database.js';
 
 /**
- * Hae kaikki päiväkirjamerkinnät käyttäjälle
- * @param {number} userId - Käyttäjän ID
- * @returns {Array} Taulukko päiväkirjamerkintöjä
+ * Get all diary entries for a user
+ * @param {number} userId - User ID
+ * @returns {Array} Array of diary entries
  */
 const getAllEntries = async (userId) => {
   try {
@@ -12,10 +12,10 @@ const getAllEntries = async (userId) => {
       [userId]
     );
     
-    // Aseta entry_id kenttä id:ksi frontend-yhteensopivuuden vuoksi
+    // Map entry_id to id for frontend compatibility
     return rows.map(entry => ({
-      id: entry.entry_id,
-      entry_id: entry.entry_id,
+      id: entry.entry_id,  // Map entry_id to id for frontend
+      entry_id: entry.entry_id, // Keep original for reference
       user_id: entry.user_id,
       entry_date: entry.entry_date,
       mood: entry.mood,
@@ -25,15 +25,16 @@ const getAllEntries = async (userId) => {
       created_at: entry.created_at
     }));
   } catch (error) {
-    throw new Error('Tietokantavirhe');
+    console.error('Error in getAllEntries:', error);
+    throw new Error('Database error');
   }
 };
 
 /**
- * Hae yksittäinen päiväkirjamerkintä
- * @param {number} entryId - Merkinnän ID
- * @param {number} userId - Käyttäjän ID (varmistusta varten)
- * @returns {object} Päiväkirjamerkintä
+ * Get a single diary entry
+ * @param {number} entryId - Entry ID
+ * @param {number} userId - User ID (for verification)
+ * @returns {object} Diary entry
  */
 const getEntryById = async (entryId, userId) => {
   try {
@@ -46,11 +47,11 @@ const getEntryById = async (entryId, userId) => {
       return null;
     }
     
-    // Aseta entry_id kenttä id:ksi frontend-yhteensopivuuden vuoksi
+    // Map entry_id to id for frontend compatibility
     const entry = rows[0];
     return {
-      id: entry.entry_id,
-      entry_id: entry.entry_id,
+      id: entry.entry_id,  // Map entry_id to id for frontend
+      entry_id: entry.entry_id, // Keep original for reference
       user_id: entry.user_id,
       entry_date: entry.entry_date,
       mood: entry.mood,
@@ -60,14 +61,15 @@ const getEntryById = async (entryId, userId) => {
       created_at: entry.created_at
     };
   } catch (error) {
-    throw new Error('Tietokantavirhe');
+    console.error('Error in getEntryById:', error);
+    throw new Error('Database error');
   }
 };
 
 /**
- * Luo uusi päiväkirjamerkintä
- * @param {object} entry - Päiväkirjamerkintä-objekti
- * @returns {number} Lisätyn merkinnän ID
+ * Create a new diary entry
+ * @param {object} entry - Diary entry object
+ * @returns {number} Inserted entry ID
  */
 const createEntry = async (entry) => {
   try {
@@ -77,46 +79,55 @@ const createEntry = async (entry) => {
     );
     return result.insertId;
   } catch (error) {
-    throw new Error('Tietokantavirhe');
+    console.error('Error in createEntry:', error);
+    throw new Error('Database error');
   }
 };
 
 /**
- * Päivitä päiväkirjamerkintä
- * @param {number} entryId - Merkinnän ID
- * @param {object} entry - Päivitetty merkintädata
- * @param {number} userId - Käyttäjän ID (varmistusta varten)
- * @returns {boolean} Onnistumisen ilmaisin
+ * Update a diary entry
+ * @param {number} entryId - Entry ID
+ * @param {object} entry - Updated entry data
+ * @param {number} userId - User ID (for verification)
+ * @returns {boolean} Success indicator
  */
 const updateEntry = async (entryId, entry, userId) => {
   try {
+    console.log(`Updating entry ${entryId} for user ${userId} with data:`, entry);
+    
     const [result] = await promisePool.query(
       'UPDATE diaryentries SET entry_date = ?, mood = ?, weight = ?, sleep_hours = ?, notes = ? WHERE entry_id = ? AND user_id = ?',
       [entry.entry_date, entry.mood, entry.weight, entry.sleep_hours, entry.notes, entryId, userId]
     );
     
+    console.log('Update result:', result);
     return result.affectedRows > 0;
   } catch (error) {
-    throw new Error('Tietokantavirhe');
+    console.error('Error in updateEntry:', error);
+    throw new Error('Database error');
   }
 };
 
 /**
- * Poista päiväkirjamerkintä
- * @param {number} entryId - Merkinnän ID
- * @param {number} userId - Käyttäjän ID (varmistusta varten)
- * @returns {boolean} Onnistumisen ilmaisin
+ * Delete a diary entry
+ * @param {number} entryId - Entry ID
+ * @param {number} userId - User ID (for verification)
+ * @returns {boolean} Success indicator
  */
 const deleteEntry = async (entryId, userId) => {
   try {
+    console.log(`Deleting entry ${entryId} for user ${userId}`);
+    
     const [result] = await promisePool.query(
       'DELETE FROM diaryentries WHERE entry_id = ? AND user_id = ?',
       [entryId, userId]
     );
     
+    console.log('Delete result:', result);
     return result.affectedRows > 0;
   } catch (error) {
-    throw new Error('Tietokantavirhe');
+    console.error('Error in deleteEntry:', error);
+    throw new Error('Database error');
   }
 };
 

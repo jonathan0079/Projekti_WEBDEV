@@ -1,7 +1,7 @@
 import mysql from 'mysql2';
 import 'dotenv/config';
 
-// Luo yhteyspooli
+// Create a connection pool
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -12,16 +12,16 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
-// Testaa tietokantayhteys
+// Test the database connection
 pool.getConnection((err, connection) => {
   if (err) {
-    console.error('Tietokantayhteys epäonnistui:', err);
+    console.error('Database connection failed:', err);
   } else {
-    console.log('Tietokanta yhdistetty onnistuneesti');
+    console.log('Database connected successfully');
     connection.release();
   }
 });
 
-// Vie promise-pohjainen pooli async/await käyttöä varten
+// Export promise-based pool for async/await usage
 const promisePool = pool.promise();
 export default promisePool;

@@ -1,178 +1,57 @@
-import { saveGameScore, getGameLeaderboard, getGameScoresByUser, getUserHighScore } from '../models/game-model.js';
+import jwt from 'jsonwebtoken';
+import { getUserById } from '../models/user-model.js';
 
 /**
- * Hae tulostaulun tiedot
- * @route GET /api/game/leaderboard
- * @access Julkinen
+ * Protect routes - Middleware to verify JWT token
  */
-const getLeaderboard = async (req, res) => {
-  try {
-    const gameType = req.query.game_type || 'calorie_clicker';
-    const limit = parseInt(req.query.limit) || 10;
-    
-    const leaderboard = await getGameLeaderboard(gameType, limit);
-    
-    res.json({
-      success: true,
-      count: leaderboard.length,
-      data: leaderboard
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Tulostaulun hakeminen epäonnistui',
-      error: error.message
-    });
-  }
-};
+const protect = async (req, res, next) => {
+  let token;
+  
+  console.log('Auth middleware running');
+  console.log('Headers:', req.headers);
 
-/**
- * Tallenna pelitulos
- * @route POST /api/game/scores
- * @access Yksityinen
- */
-const saveScore = async (req, res) => {
-  try {
-    const userId = req.user.id || req.user.user_id;
-    
-    if (!userId) {
-      return res.status(400).json({
-        success: false,
-        message: 'Käyttäjän ID:tä ei löytynyt pyynnöstä'
-      });
-    }
-    
-    const { score, game_type } = req.body;
-    
-    // Validoi syöte
-    if (score === undefined || !game_type) {
-      return res.status(400).json({
-        success: false,
-        message: 'Tulos ja pelityyppi vaaditaan'
-      });
-    }
-    
-    // Validoi että tulos on numero
-    const parsedScore = parseInt(score);
-    if (isNaN(parsedScore)) {
-      return res.status(400).json({
-        success: false,
-        message: 'Tuloksen täytyy olla numero'
-      });
-    }
-    
-    const scoreData = {
-      user_id: userId,
-      score: parsedScore,
-      game_type
-    };
-    
-    const scoreId = await saveGameScore(scoreData);
-    
-    res.status(201).json({
-      success: true,
-      message: 'Tulos tallennettu onnistuneesti',
-      data: {
-        id: scoreId,
-        ...scoreData
+  // Check for token in headers
+  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+    try {
+      // Get token from header
+      token = req.headers.authorization.split(' ')[1];
+      console.log('Token extracted:', token.substring(0, 10) + '...');
+      
+      // Verify token
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      console.log('Token decoded:', decoded);
+      
+      // Get user from database - make sure to use the correct ID field
+      const user = await getUserById(decoded.id);
+      console.log('User found:', user ? 'Yes' : 'No');
+      
+      if (!user) {
+        console.error('User not found in database for ID:', decoded.id);
+        return res.status(401).json({
+          success: false,
+          message: 'User not found or token is invalid'
+        });
       }
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Tuloksen tallentaminen epäonnistui',
-      error: error.message
-    });
-  }
-};
-
-/**
- * Hae käyttäjän tulokset pelille
- * @route GET /api/game/user-scores
- * @access Yksityinen
- */
-const getUserScores = async (req, res) => {
-  try {
-    const userId = req.user.id || req.user.user_id;
-    
-    if (!userId) {
-      return res.status(400).json({
+      
+      // Set user in request
+      req.user = user;
+      console.log('User set in request:', user.username);
+      next();
+    } catch (error) {
+      console.error('Authentication error:', error);
+      return res.status(401).json({
         success: false,
-        message: 'Käyttäjän ID:tä ei löytynyt pyynnöstä'
+        message: 'Not authorized, token verification failed',
+        error: error.message
       });
     }
-    
-    const gameType = req.query.game_type || 'calorie_clicker';
-    const limit = parseInt(req.query.limit) || 5;
-    
-    const scores = await getGameScoresByUser(userId, gameType, limit);
-    
-    res.json({
-      success: true,
-      count: scores.length,
-      data: scores
-    });
-  } catch (error) {
-    res.status(500).json({
+  } else {
+    console.error('No token provided in headers');
+    return res.status(401).json({
       success: false,
-      message: 'Käyttäjän tuloksien hakeminen epäonnistui',
-      error: error.message
+      message: 'Not authorized, no token'
     });
   }
 };
 
-/**
- * Hae käyttäjän paras tulos pelille
- * @route GET /api/game/high-score
- * @access Yksityinen
- */
-const getHighScore = async (req, res) => {
-  try {
-    const userId = req.user.id || req.user.user_id;
-    
-    if (!userId) {
-      return res.status(400).json({
-        success: false,
-        message: 'Käyttäjän ID:tä ei löytynyt pyynnöstä'
-      });
-    }
-    
-    const gameType = req.query.game_type || 'calorie_clicker';
-    
-    const highScore = await getUserHighScore(userId, gameType);
-    
-    res.json({
-      success: true,
-      data: {
-        user_id: userId,
-        game_type: gameType,
-        high_score: highScore
-      }
-    });
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: 'Parhaan tuloksen hakeminen epäonnistui',
-      error: error.message
-    });
-  }
-};
-
-/**
- * API:n juuripäätepisteen testi
- * @route GET /api/game
- * @access Julkinen
- */
-const apiRoot = (req, res) => {
-  res.json({ 
-    message: 'Tervetuloa Peli-API:in',
-    endpoints: {
-      leaderboard: '/api/game/leaderboard?game_type=calorie_clicker&limit=10',
-      userScores: '/api/game/user-scores?game_type=calorie_clicker&limit=5 (vaatii kirjautumisen)',
-      highScore: '/api/game/high-score?game_type=calorie_clicker (vaatii kirjautumisen)',
-      saveScore: '/api/game/scores (POST, vaatii kirjautumisen)'
-    }
-  });
-};
-
-export { getLeaderboard, saveScore, getUserScores, getHighScore, apiRoot };
+export { protect };

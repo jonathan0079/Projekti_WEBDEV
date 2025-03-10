@@ -2,12 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 
-// Tuo reitittimet
+// Import routers
 import authRouter from './routes/auth-routes.js';
 import diaryRouter from './routes/diary-router.js';
 import gameRouter from './routes/game-router.js';
 
-// Luo Express sovellus
+// Create Express app
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Perusreitti API:n juurelle
+// Basic route for API root
 app.get('/api', (req, res) => {
   res.json({ 
-    message: 'Tervetuloa Terveyspäiväkirja API:in',
+    message: 'Welcome to Health Diary API',
     endpoints: {
       auth: '/api/auth',
       diary: '/api/diary',
@@ -27,35 +27,36 @@ app.get('/api', (req, res) => {
   });
 });
 
-// Reitit
+// Routes
 app.use('/api/auth', authRouter);
 app.use('/api/diary', diaryRouter);
 app.use('/api/game', gameRouter);
 
-// Perusjuurireitti
+// Basic root route
 app.get('/', (req, res) => {
-  res.json({ message: 'Terveyspäiväkirja API-palvelin on käynnissä' });
+  res.json({ message: 'Health Diary API Server is running' });
 });
 
-// Virheidenkäsittely middleware
+// Error handling middleware
 app.use((err, req, res, next) => {
+  console.error('Global error handler:', err.stack);
   res.status(500).json({
     success: false,
-    message: 'Palvelinvirhe',
+    message: 'Server error',
     error: process.env.NODE_ENV === 'production' ? null : err.message
   });
 });
 
-// Reittiä ei löydy käsittelijä
+// Route not found handler
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: `Reittiä ei löydy: ${req.method} ${req.originalUrl}`
+    message: `Route not found: ${req.method} ${req.originalUrl}`
   });
 });
 
-// Käynnistä palvelin
+// Start server
 app.listen(PORT, () => {
-  console.log(`Palvelin käynnissä portissa ${PORT}`);
-  console.log(`API saatavilla osoitteessa http://localhost:${PORT}/api`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`API available at http://localhost:${PORT}/api`);
 });
