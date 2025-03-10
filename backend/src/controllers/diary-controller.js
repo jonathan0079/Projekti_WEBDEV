@@ -1,18 +1,15 @@
 import { getAllEntries, getEntryById, createEntry, updateEntry, deleteEntry } from '../models/diary-model.js';
 
 /**
- * Get all diary entries for the logged-in user
+ * Hae kaikki päiväkirjamerkinnät kirjautuneelle käyttäjälle
  * @route GET /api/diary
- * @access Private
+ * @access Yksityinen
  */
 const getDiaryEntries = async (req, res) => {
   try {
     const userId = req.user.id;
-    console.log('Getting diary entries for user ID:', userId);
     
     const entries = await getAllEntries(userId);
-    
-    console.log(`Found ${entries.length} diary entries`);
     
     res.json({
       success: true,
@@ -20,34 +17,30 @@ const getDiaryEntries = async (req, res) => {
       data: entries
     });
   } catch (error) {
-    console.error('Get diary entries error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to get diary entries',
+      message: 'Päiväkirjamerkintöjen hakeminen epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Get a single diary entry
+ * Hae yksittäinen päiväkirjamerkintä
  * @route GET /api/diary/:id
- * @access Private
+ * @access Yksityinen
  */
 const getDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
     const entryId = req.params.id;
     
-    console.log(`Getting diary entry ${entryId} for user ${userId}`);
-    
     const entry = await getEntryById(entryId, userId);
     
     if (!entry) {
-      console.log(`Entry ${entryId} not found for user ${userId}`);
       return res.status(404).json({
         success: false,
-        message: 'Diary entry not found'
+        message: 'Päiväkirjamerkintää ei löytynyt'
       });
     }
 
@@ -56,33 +49,29 @@ const getDiaryEntry = async (req, res) => {
       data: entry
     });
   } catch (error) {
-    console.error('Get diary entry error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to get diary entry',
+      message: 'Päiväkirjamerkinnän hakeminen epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Create a new diary entry
+ * Luo uusi päiväkirjamerkintä
  * @route POST /api/diary
- * @access Private
+ * @access Yksityinen
  */
 const createDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
     const { entry_date, mood, weight, sleep_hours, notes } = req.body;
-
-    console.log('Creating new diary entry for user:', userId);
-    console.log('Entry data:', { entry_date, mood, weight, sleep_hours });
     
-    // Validate input
+    // Validoi syöte
     if (!entry_date) {
       return res.status(400).json({
         success: false,
-        message: 'Entry date is required'
+        message: 'Päivämäärä vaaditaan'
       });
     }
 
@@ -96,8 +85,6 @@ const createDiaryEntry = async (req, res) => {
     };
 
     const entryId = await createEntry(newEntry);
-    console.log('Created diary entry with ID:', entryId);
-    
     const createdEntry = await getEntryById(entryId, userId);
 
     res.status(201).json({
@@ -105,44 +92,39 @@ const createDiaryEntry = async (req, res) => {
       data: createdEntry
     });
   } catch (error) {
-    console.error('Create diary entry error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to create diary entry',
+      message: 'Päiväkirjamerkinnän luonti epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Update a diary entry
+ * Päivitä päiväkirjamerkintä
  * @route PUT /api/diary/:id
- * @access Private
+ * @access Yksityinen
  */
 const updateDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
     const entryId = req.params.id;
     const { entry_date, mood, weight, sleep_hours, notes } = req.body;
-
-    console.log(`Updating diary entry ${entryId} for user ${userId}`);
-    console.log('New data:', { entry_date, mood, weight, sleep_hours });
     
-    // Check if entry exists
+    // Tarkista onko merkintä olemassa
     const entry = await getEntryById(entryId, userId);
     if (!entry) {
-      console.log(`Entry ${entryId} not found for user ${userId}`);
       return res.status(404).json({
         success: false,
-        message: 'Diary entry not found or not owned by you'
+        message: 'Päiväkirjamerkintää ei löytynyt tai sitä ei omista nykyinen käyttäjä'
       });
     }
 
-    // Validate input
+    // Validoi syöte
     if (!entry_date) {
       return res.status(400).json({
         success: false,
-        message: 'Entry date is required'
+        message: 'Päivämäärä vaaditaan'
       });
     }
 
@@ -159,7 +141,7 @@ const updateDiaryEntry = async (req, res) => {
     if (!success) {
       return res.status(500).json({
         success: false,
-        message: 'Failed to update entry'
+        message: 'Merkinnän päivitys epäonnistui'
       });
     }
     
@@ -170,34 +152,30 @@ const updateDiaryEntry = async (req, res) => {
       data: updatedEntry
     });
   } catch (error) {
-    console.error('Update diary entry error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to update diary entry',
+      message: 'Päiväkirjamerkinnän päivitys epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Delete a diary entry
+ * Poista päiväkirjamerkintä
  * @route DELETE /api/diary/:id
- * @access Private
+ * @access Yksityinen
  */
 const deleteDiaryEntry = async (req, res) => {
   try {
     const userId = req.user.id;
     const entryId = req.params.id;
-
-    console.log(`Attempting to delete entry ${entryId} for user ${userId}`);
     
-    // Check if entry exists
+    // Tarkista onko merkintä olemassa
     const entry = await getEntryById(entryId, userId);
     if (!entry) {
-      console.log(`Entry ${entryId} not found for user ${userId}`);
       return res.status(404).json({
         success: false,
-        message: 'Diary entry not found or not owned by you'
+        message: 'Päiväkirjamerkintää ei löytynyt tai sitä ei omista nykyinen käyttäjä'
       });
     }
 
@@ -206,21 +184,18 @@ const deleteDiaryEntry = async (req, res) => {
     if (!success) {
       return res.status(500).json({
         success: false,
-        message: 'Failed to delete entry'
+        message: 'Merkinnän poisto epäonnistui'
       });
     }
-
-    console.log(`Successfully deleted entry ${entryId} for user ${userId}`);
     
     res.json({
       success: true,
-      message: 'Diary entry deleted successfully'
+      message: 'Päiväkirjamerkintä poistettu onnistuneesti'
     });
   } catch (error) {
-    console.error('Delete diary entry error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to delete diary entry',
+      message: 'Päiväkirjamerkinnän poisto epäonnistui',
       error: error.message
     });
   }

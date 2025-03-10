@@ -2,12 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 
-// Import routers
+// Tuo reitittimet
 import authRouter from './routes/auth-routes.js';
 import diaryRouter from './routes/diary-router.js';
 import gameRouter from './routes/game-router.js';
 
-// Create Express app
+// Luo Express sovellus
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,10 +15,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Basic route for API root
+// Perusreitti API:n juurelle
 app.get('/api', (req, res) => {
   res.json({ 
-    message: 'Welcome to Health Diary API',
+    message: 'Tervetuloa Terveyspäiväkirja API:in',
     endpoints: {
       auth: '/api/auth',
       diary: '/api/diary',
@@ -27,36 +27,35 @@ app.get('/api', (req, res) => {
   });
 });
 
-// Routes
+// Reitit
 app.use('/api/auth', authRouter);
 app.use('/api/diary', diaryRouter);
 app.use('/api/game', gameRouter);
 
-// Basic root route
+// Perusjuurireitti
 app.get('/', (req, res) => {
-  res.json({ message: 'Health Diary API Server is running' });
+  res.json({ message: 'Terveyspäiväkirja API-palvelin on käynnissä' });
 });
 
-// Error handling middleware
+// Virheidenkäsittely middleware
 app.use((err, req, res, next) => {
-  console.error('Global error handler:', err.stack);
   res.status(500).json({
     success: false,
-    message: 'Server error',
+    message: 'Palvelinvirhe',
     error: process.env.NODE_ENV === 'production' ? null : err.message
   });
 });
 
-// Route not found handler
+// Reittiä ei löydy käsittelijä
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: `Route not found: ${req.method} ${req.originalUrl}`
+    message: `Reittiä ei löydy: ${req.method} ${req.originalUrl}`
   });
 });
 
-// Start server
+// Käynnistä palvelin
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`API available at http://localhost:${PORT}/api`);
+  console.log(`Palvelin käynnissä portissa ${PORT}`);
+  console.log(`API saatavilla osoitteessa http://localhost:${PORT}/api`);
 });

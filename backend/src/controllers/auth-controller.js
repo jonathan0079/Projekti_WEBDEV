@@ -3,48 +3,45 @@ import bcrypt from 'bcrypt';
 import { getUserById, getUserByUsername, registerUser as registerUserModel } from '../models/user-model.js';
 
 /**
- * Register a new user
+ * Rekisteröi uuden käyttäjän
  * @route POST /api/auth/register
- * @access Public
+ * @access Julkinen
  */
 const register = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
-    // Validate input
+    // Tarkista syöte
     if (!username || !email || !password) {
       return res.status(400).json({
         success: false,
-        message: 'Username, email and password are required'
+        message: 'Käyttäjänimi, sähköposti ja salasana vaaditaan'
       });
     }
 
-    // Register user - this step is working correctly
+    // Rekisteröi käyttäjä
     const userId = await registerUserModel({ username, email, password });
-    console.log(`User registered with ID: ${userId}`);
 
     try {
-      // Get user without password
+      // Hae käyttäjä ilman salasanaa
       const user = await getUserById(userId);
       
       if (!user) {
-        console.error(`User with ID ${userId} was created but could not be retrieved`);
         return res.status(500).json({
           success: false,
-          message: 'User was registered but could not be retrieved'
+          message: 'Käyttäjä rekisteröitiin mutta tietoja ei voitu hakea'
         });
       }
 
-      // Check if JWT_SECRET is defined
+      // Tarkista onko JWT_SECRET määritelty
       if (!process.env.JWT_SECRET) {
-        console.error('JWT_SECRET is not defined in environment variables');
         return res.status(500).json({
           success: false,
-          message: 'Server configuration error (JWT_SECRET missing)'
+          message: 'Palvelimen määritysvirhe (JWT_SECRET puuttuu)'
         });
       }
 
-      // Generate token
+      // Luo token
       const token = jwt.sign({ id: userId }, process.env.JWT_SECRET, {
         expiresIn: '30d'
       });
@@ -59,15 +56,11 @@ const register = async (req, res) => {
         }
       });
     } catch (innerError) {
-      // User was created but we had a problem with the response
-      console.error('Error after successful registration:', innerError);
-      
-      // Return partial success - telling the client the account was created
-      // but there was an issue generating the session
+      // Osittainen onnistuminen - tili luotiin mutta sessio-ongelmia
       return res.status(201).json({
         success: true,
         partialSuccess: true,
-        message: 'Account created successfully, Please log in.',
+        message: 'Tili luotu onnistuneesti. Kirjaudu sisään.',
         data: {
           id: userId,
           username: username,
@@ -76,8 +69,6 @@ const register = async (req, res) => {
       });
     }
   } catch (error) {
-    console.error('Registration error:', error);
-    
     if (error.message === 'Username already exists' || error.message === 'Email already exists') {
       return res.status(400).json({
         success: false,
@@ -87,60 +78,56 @@ const register = async (req, res) => {
     
     res.status(500).json({
       success: false,
-      message: 'Registration failed',
+      message: 'Rekisteröinti epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Login user
+ * Kirjaa käyttäjän sisään
  * @route POST /api/auth/login
- * @access Public
+ * @access Julkinen
  */
 const login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Validate input
+    // Tarkista syöte
     if (!username || !password) {
       return res.status(400).json({
         success: false,
-        message: 'Username and password are required'
+        message: 'Käyttäjänimi ja salasana vaaditaan'
       });
     }
 
-    // Check if user exists
+    // Tarkista onko käyttäjä olemassa
     const user = await getUserByUsername(username);
     if (!user) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid credentials'
+        message: 'Virheelliset kirjautumistiedot'
       });
     }
 
-    // Check if password matches
+    // Tarkista täsmääkö salasana
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({
         success: false,
-        message: 'Invalid credentials'
+        message: 'Virheelliset kirjautumistiedot'
       });
     }
 
-    // Check if JWT_SECRET is defined
+    // Tarkista onko JWT_SECRET määritelty
     if (!process.env.JWT_SECRET) {
-      console.error('JWT_SECRET is not defined in environment variables');
       return res.status(500).json({
         success: false,
-        message: 'Server configuration error'
+        message: 'Palvelimen määritysvirhe'
       });
     }
 
-    // Log what we're using for the user ID
-    console.log('Creating token with user ID:', user.id || user.user_id);
-
-    // Generate token using the correct ID field (could be user.id or user.user_id)
+    // Luo token käyttäen oikeaa ID-kenttää
     const token = jwt.sign({ id: user.id || user.user_id }, process.env.JWT_SECRET, {
       expiresIn: '30d'
     });
@@ -155,23 +142,22 @@ const login = async (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Login error:', error);
     res.status(500).json({
       success: false,
-      message: 'Login failed',
+      message: 'Kirjautuminen epäonnistui',
       error: error.message
     });
   }
 };
 
 /**
- * Get current user
+ * Hae nykyinen käyttäjä
  * @route GET /api/auth/me
- * @access Private
+ * @access Yksityinen
  */
 const getMe = async (req, res) => {
   try {
-    // User is already available from auth middleware
+    // Käyttäjä on jo saatavilla auth middlewaresta
     const user = req.user;
     
     res.json({
@@ -179,10 +165,9 @@ const getMe = async (req, res) => {
       data: user
     });
   } catch (error) {
-    console.error('GetMe error:', error);
     res.status(500).json({
       success: false,
-      message: 'Failed to get user information',
+      message: 'Käyttäjätietojen haku epäonnistui',
       error: error.message
     });
   }
