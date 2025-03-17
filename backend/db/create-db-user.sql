@@ -1,4 +1,4 @@
 
-CREATE USER 'healthuser'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON `HealthDiary`.* TO 'healthuser'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON `HealthDiary`.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;

@@ -1,4 +1,4 @@
--- tämä luo tietokannan ja taulut, joita käytetään HealthDiary-sovelluksessa
+-- tämä luo tietokannan ja taulut, joita käytetään Diary-sovelluksessa
 -- Taulut: Users, DiaryEntries, GameScores
 DROP DATABASE IF EXISTS HealthDiary;
 CREATE DATABASE HealthDiary;
@@ -39,8 +39,3 @@ CREATE TABLE IF NOT EXISTS GameScores (
 -- Create indexes for faster queries
 CREATE INDEX IF NOT EXISTS idx_game_scores_type_score ON GameScores(game_type, score DESC);
 CREATE INDEX IF NOT EXISTS idx_game_scores_user_type ON GameScores(user_id, game_type);
-
-
--- Insert sample user for testing
-INSERT INTO Users (username, password, email, user_level) 
-VALUES ('testuser', '$2b$10$YmBlOQqm5Oy8Mms4iw1qA.w1iRgZ5WkE0pY0kUw1RVZnFoyWSIo.2', 'test@example.com', 'regular');
