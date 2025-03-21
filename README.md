@@ -8,7 +8,7 @@ Ensimmäisessä tehtävässä oli tavoitteena asentaa projektissa käytettävä 
 -	Requests Library 0.4.2, joka on salasanojen käsittelyyn
 -	Robotidy 4.16, koodin muotoiluun
 
-Asennukset suoritettiin opettajan antaman ohjeen mukaisesti (1)
+Asennukset suoritettiin opettajan antaman ohjeen mukaisesti (https://github.com/sakluk/projekti-terveyssovelluksen-kehitys/blob/main/ohjeet_testaus/01_asennukset.md)
 Python-virtuaaliympäristöön, joka luotiin projektin juuri hakemistoon. Pip päivitettiin ennen kirjastojen asennusta. Browser Libraryyn asennettiin myös tarvit-tavat selainajurit komennolla: `rfbrowser init`. Asennusten onnistuminen varmistettiin asennustesti.py-skriptillä
 
 ![asennustesti py](https://github.com/user-attachments/assets/f534bba5-0622-4efb-a997-5c5a8e0ff283)
