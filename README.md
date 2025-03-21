@@ -1,4 +1,4 @@
-1	Tehtävä
+#1	Tehtävä
 Ensimmäisessä tehtävässä oli tavoitteena asentaa projektissa käytettävä Robot Framework automaatiotestaustyökalu ja sen lisäosat.
  Komponentit mitä asensin:
 -	Python 3.13 virtuaaliympäristö (.venv)
