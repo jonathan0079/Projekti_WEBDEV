@@ -1,4 +1,5 @@
-#1	Tehtävä
+# Ohjelmistotestaus - yksilötehtävät
+## 1	Tehtävä
 Ensimmäisessä tehtävässä oli tavoitteena asentaa projektissa käytettävä Robot Framework automaatiotestaustyökalu ja sen lisäosat.
  Komponentit mitä asensin:
 -	Python 3.13 virtuaaliympäristö (.venv)
@@ -14,3 +15,5 @@ Python-virtuaaliympäristöön, joka luotiin projektin juuri hakemistoon. Pip p�
 
 Kuvassa suoritettu onnistunut asennustesti.py-skripti. 
 Riippuvuudet on dokumentoitu requirements.txt-tiedostoon, joka mahdollistaa samojen kirjastojen asennuksen toisessa laitteessa.
+
+## 2 Tehtävä
