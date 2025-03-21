@@ -20,5 +20,4 @@ Riippuvuudet on dokumentoitu requirements.txt-tiedostoon, joka mahdollistaa samo
 
 ![requirements](https://github.com/user-attachments/assets/8cadb625-6e6b-49c3-be85-4c88718f4019)
 
-Kuvassa käytetty komento: `pip install -r requirements.txt` tarvittujen kirjastojen asennukseen mikäli niitä ei löydy nykyisessä ympäristössä. Tässä tapauksessa kaikki löytyvät, kaikessa lukee "Requirement already satisfied:..."
-## 2 Tehtävä
+Kuvassa käytetty komento: `pip install -r requirements.txt` tarvittujen kirjastojen asennukseen mikäli niitä ei löydy nykyisessä ympäristössä. Tässä tapauksessa kaikki löytyvät, koska joka riviltä löytyy "Requirement already satisfied:...".
