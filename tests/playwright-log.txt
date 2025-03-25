@@ -1,0 +1,15 @@
+{"level":30,"time":"2025-03-25T10:45:02.670Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Listening on 51205"}
+(node:12920) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-25T10:45:03.059Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-25T10:45:03.859Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-25T10:45:03.859Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-25T10:45:03.859Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-25T10:45:03.863Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-25T10:45:03.863Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-25T10:45:03.868Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Changed active context"}
+{"level":30,"time":"2025-03-25T10:45:03.972Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-25T10:45:03.972Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Changed active page"}
+{"level":30,"time":"2025-03-25T10:45:04.069Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-25T10:45:04.077Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-25T10:45:04.077Z","pid":12920,"hostname":"DESKTOP-6U8TEKV","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
