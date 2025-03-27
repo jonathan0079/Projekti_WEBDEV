@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-27T18:20:19.197169" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser Demo" source="C:\KOULU\Koodi\Projekti_WEBDEV-2\tests\selenium_tests\browser_demo.robot">
+<test id="s1-t1" name="Test Web Form" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-03-27T18:20:19.316105" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\tests\\selenium_tests\\browser\\traces\\temp\\46263b1f-4ab0-44bf-99ca-29e8655edba4"}</msg>
+<msg time="2025-03-27T18:20:19.336310" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js using port 51409</msg>
+<msg time="2025-03-27T18:20:19.336418" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '51409']</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2025-03-27T18:20:19.315531" elapsed="6.016255">Execution terminated by signal</status>
+</kw>
+<kw name="New Page" owner="Browser">
+<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.332071" elapsed="0.000128"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<arg>==</arg>
+<arg>Web form</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.332326" elapsed="0.000075"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<arg>[name="my-text"]</arg>
+<arg>${Username}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.332500" elapsed="0.000068"/>
+</kw>
+<kw name="Type Secret" owner="Browser">
+<arg>[name="my-password"]</arg>
+<arg>$Password</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.332662" elapsed="0.000079"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<arg>[name="my-textarea"]</arg>
+<arg>${Message}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.332847" elapsed="0.000067"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<arg>[name="my-select"]</arg>
+<arg>value</arg>
+<arg>${DropdownValue}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333003" elapsed="0.000065"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<arg>[name="my-datalist"]</arg>
+<arg>${DropdownDatalist}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333155" elapsed="0.000066"/>
+</kw>
+<kw name="Upload File By Selector" owner="Browser">
+<arg>input[name="my-file"]</arg>
+<arg>${FileToUpload}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Uploads file from ``path`` to file input element matched by selector.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333317" elapsed="0.000065"/>
+</kw>
+<kw name="Uncheck Checkbox" owner="Browser">
+<arg>input[id="my-check-1"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Unchecks the checkbox found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333519" elapsed="0.000065"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>input[id="my-check-2"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333664" elapsed="0.000071"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>[id="my-radio-2"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.333841" elapsed="0.000081"/>
+</kw>
+<kw name="Click With Options" owner="Browser">
+<arg>button</arg>
+<arg>delay=2 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.334025" elapsed="0.000080"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<arg>id=message</arg>
+<arg>==</arg>
+<arg>Received!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:20:25.334208" elapsed="0.000091"/>
+</kw>
+<msg time="2025-03-27T18:20:25.334548" level="INFO">Using previously saved or imported port 51409, skipping Browser process start</msg>
+<errors>
+<msg time="2025-03-27T18:20:25.550902" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>

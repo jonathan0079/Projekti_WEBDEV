@@ -1,88 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-27T13:24:42.686809" rpa="false" schemaversion="5">
-<suite id="s1" name="Browser Demo Oma" source="C:\KOULU\Koodi\Projekti_WEBDEV-2\tests\browser_demo_oma.robot">
-<test id="s1-t1" name="Test Login Flow" line="11">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-27T18:13:32.721478" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Own" source="C:\KOULU\Koodi\Projekti_WEBDEV-2\tests\test_own.robot">
+<test id="s1-t1" name="Test Login Flow" line="12">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-27T13:24:42.803881" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\tests\\browser\\traces\\temp\\e74254b2-294b-41b1-a421-fdc0ba89a397"}</msg>
-<msg time="2025-03-27T13:24:42.823360" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js using port 54171</msg>
-<msg time="2025-03-27T13:24:42.823476" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '54171']</msg>
-<msg time="2025-03-27T13:24:43.561777" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\tests\\browser\\traces\\temp\\e74254b2-294b-41b1-a421-fdc0ba89a397"}</msg>
+<msg time="2025-03-27T18:13:32.835651" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\tests\\browser\\traces\\temp\\04ece5a0-7d69-4c08-8469-72d3ffb75b5a"}</msg>
+<msg time="2025-03-27T18:13:32.854554" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js using port 50774</msg>
+<msg time="2025-03-27T18:13:32.854706" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '50774']</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-27T13:24:42.803202" elapsed="0.758814"/>
+<status status="FAIL" start="2025-03-27T18:13:32.835143" elapsed="3.247900">Execution terminated by signal</status>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-27T13:24:43.750241" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173</msg>
-<msg time="2025-03-27T13:24:43.750322" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-27T13:24:43.562423" elapsed="0.188052"/>
+<status status="NOT RUN" start="2025-03-27T18:13:36.083634" elapsed="0.000231"/>
 </kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-27T13:24:43.756459" level="INFO">Title: 'PasaGym - Terveyspäiväkirja'</msg>
-<arg>*=</arg>
-<arg>PasaGym</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>css=header</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
 <tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-27T13:24:43.750796" elapsed="0.005792"/>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-03-27T18:13:36.084042" elapsed="0.000096"/>
+</kw>
+<kw name="Ensure Logged Out">
+<status status="NOT RUN" start="2025-03-27T18:13:36.084418" elapsed="0.000094"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-03-27T13:24:43.757457" level="INFO">Clicks the element 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:43.756906" elapsed="0.115764"/>
+<status status="NOT RUN" start="2025-03-27T18:13:36.084612" elapsed="0.000077"/>
 </kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-03-27T13:24:43.877805" level="INFO">Waited for Element with selector id=login-modal at state visible</msg>
-<arg>id=login-modal</arg>
-<arg>visible</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-03-27T13:24:43.872956" elapsed="0.004970"/>
-</kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-27T13:24:43.878633" level="INFO">Types the text 'jonathan' in the given field.</msg>
+<kw name="Fill Text" owner="Browser">
 <arg>id=login-username</arg>
 <arg>${USERNAME}</arg>
-<arg>delay=0.1s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:43.878127" elapsed="0.877711"/>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:13:36.084788" elapsed="0.000075"/>
 </kw>
-<kw name="Fill Secret" owner="Browser">
+<kw name="Fill Text" owner="Browser">
 <arg>id=login-password</arg>
-<arg>123</arg>
+<arg>${USER_PASSWORD}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
-<doc>Fills the given secret from ``variable_name`` into the
-text field found by ``selector``.</doc>
-<status status="FAIL" start="2025-03-27T13:24:44.756191" elapsed="0.002629">ValueError: Direct assignment of values or variables as 'secret' is not allowed. Use special variable syntax ($var instead of ${var}) to prevent variable values from being spoiled.</status>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T18:13:36.084957" elapsed="0.000072"/>
 </kw>
 <kw name="Click" owner="Browser">
-<arg>button.form-button &gt;&gt; text=Kirjaudu sisään</arg>
+<arg>css=form#login-form button[type="submit"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:44.759051" elapsed="0.000136"/>
+<status status="NOT RUN" start="2025-03-27T18:13:36.085121" elapsed="0.000076"/>
 </kw>
 <kw name="Wait For Elements State" owner="Browser">
 <arg>id=user-greeting</arg>
 <arg>visible</arg>
+<arg>timeout=5s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:44.759343" elapsed="0.000104"/>
+<status status="NOT RUN" start="2025-03-27T18:13:36.085297" elapsed="0.000071"/>
 </kw>
 <kw name="Get Text" owner="Browser">
 <arg>id=user-greeting</arg>
@@ -92,144 +79,10 @@ text field found by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:44.759643" elapsed="0.000100"/>
+<status status="NOT RUN" start="2025-03-27T18:13:36.085534" elapsed="0.000065"/>
 </kw>
-<msg time="2025-03-27T13:24:44.762251" level="INFO">Set timeout to: 10000</msg>
-<status status="FAIL" start="2025-03-27T13:24:42.802464" elapsed="1.957468">ValueError: Direct assignment of values or variables as 'secret' is not allowed. Use special variable syntax ($var instead of ${var}) to prevent variable values from being spoiled.</status>
-</test>
-<test id="s1-t2" name="Test Registration Flow" line="27">
-<kw name="New Browser" owner="Browser">
-<msg time="2025-03-27T13:24:44.763670" level="INFO">Switching browser to browser=d14bbc22-1628-46c4-a6ff-42584cf9c0c6</msg>
-<msg time="2025-03-27T13:24:44.765965" level="INFO">Successfully changed active browser: browser=d14bbc22-1628-46c4-a6ff-42584cf9c0c6</msg>
-<msg time="2025-03-27T13:24:44.766015" level="INFO">Reusing existing browser with id: browser=d14bbc22-1628-46c4-a6ff-42584cf9c0c6</msg>
-<arg>chromium</arg>
-<arg>headless=No</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-27T13:24:44.763269" elapsed="0.002787"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2025-03-27T13:24:44.844463" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173</msg>
-<arg>${URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-27T13:24:44.766205" elapsed="0.078458"/>
-</kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-27T13:24:44.875409" level="INFO">Title: 'PasaGym - Terveyspäiväkirja'</msg>
-<arg>*=</arg>
-<arg>PasaGym</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-27T13:24:44.844917" elapsed="0.030592"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-27T13:24:44.876353" level="INFO">Clicks the element 'id=login-button'.</msg>
-<arg>id=login-button</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:44.875788" elapsed="0.036023"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2025-03-27T13:24:44.912496" level="INFO">Clicks the element 'id=register-tab'.</msg>
-<arg>id=register-tab</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:44.912062" elapsed="0.795160"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-03-27T13:24:45.712289" level="INFO">Waited for Element with selector id=register-form at state visible</msg>
-<arg>id=register-form</arg>
-<arg>visible</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-03-27T13:24:45.707543" elapsed="0.004879"/>
-</kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-27T13:24:45.713401" level="INFO">Types the text 'jonathan_new' in the given field.</msg>
-<arg>id=register-username</arg>
-<arg>${USERNAME}_new</arg>
-<arg>delay=0.1s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:45.712826" elapsed="1.317430"/>
-</kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-27T13:24:47.031151" level="INFO">Types the text 'new_test@example.com' in the given field.</msg>
-<arg>id=register-email</arg>
-<arg>new_${EMAIL}</arg>
-<arg>delay=0.1s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-27T13:24:47.030554" elapsed="2.186586"/>
-</kw>
-<kw name="Fill Secret" owner="Browser">
-<arg>id=register-password</arg>
-<arg>123</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Fills the given secret from ``variable_name`` into the
-text field found by ``selector``.</doc>
-<status status="FAIL" start="2025-03-27T13:24:49.217430" elapsed="0.001268">ValueError: Direct assignment of values or variables as 'secret' is not allowed. Use special variable syntax ($var instead of ${var}) to prevent variable values from being spoiled.</status>
-</kw>
-<kw name="Fill Secret" owner="Browser">
-<arg>id=register-confirm-password</arg>
-<arg>123</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Fills the given secret from ``variable_name`` into the
-text field found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:49.218884" elapsed="0.000086"/>
-</kw>
-<kw name="Click" owner="Browser">
-<arg>button.form-button &gt;&gt; text=Rekisteröidy</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:49.219071" elapsed="0.000072"/>
-</kw>
-<kw name="Wait For Elements State" owner="Browser">
-<arg>id=register-error</arg>
-<arg>visible</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:49.219237" elapsed="0.000069"/>
-</kw>
-<kw name="Get Text" owner="Browser">
-<arg>id=register-error</arg>
-<arg>*=</arg>
-<arg>Rekisteröinti onnistui</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-27T13:24:49.219396" elapsed="0.000067"/>
-</kw>
-<msg time="2025-03-27T13:24:49.221033" level="INFO">Set timeout to: 10000</msg>
-<status status="FAIL" start="2025-03-27T13:24:44.762971" elapsed="4.456633">ValueError: Direct assignment of values or variables as 'secret' is not allowed. Use special variable syntax ($var instead of ${var}) to prevent variable values from being spoiled.</status>
-</test>
-<status status="FAIL" start="2025-03-27T13:24:42.687727" elapsed="6.534136"/>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat name="Browser Demo Oma" id="s1" pass="0" fail="2" skip="0">Browser Demo Oma</stat>
-</suite>
-</statistics>
+<msg time="2025-03-27T18:13:36.085820" level="INFO">Using previously saved or imported port 50774, skipping Browser process start</msg>
 <errors>
+<msg time="2025-03-27T18:13:37.430662" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
