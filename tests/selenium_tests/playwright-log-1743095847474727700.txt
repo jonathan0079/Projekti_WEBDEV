@@ -1,0 +1,50 @@
+{"level":30,"time":"2025-03-27T17:17:28.013Z","pid":72000,"hostname":"GOAT","msg":"Listening on 55176"}
+(node:72000) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T17:17:28.094Z","pid":72000,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T17:17:28.247Z","pid":72000,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T17:17:28.247Z","pid":72000,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T17:17:28.247Z","pid":72000,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T17:17:28.252Z","pid":72000,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T17:17:28.252Z","pid":72000,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T17:17:28.260Z","pid":72000,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T17:17:28.377Z","pid":72000,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T17:17:28.377Z","pid":72000,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T17:17:28.507Z","pid":72000,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T17:17:28.522Z","pid":72000,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:28.522Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:29.783Z","pid":72000,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:29.786Z","pid":72000,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:29.786Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:30.543Z","pid":72000,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:30.547Z","pid":72000,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:30.547Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.164Z","pid":72000,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:33.167Z","pid":72000,"hostname":"GOAT","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-27T17:17:33.168Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.184Z","pid":72000,"hostname":"GOAT","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-27T17:17:33.184Z","pid":72000,"hostname":"GOAT","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-27T17:17:33.184Z","pid":72000,"hostname":"GOAT","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-27T17:17:33.188Z","pid":72000,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:33.188Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-datalist\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.631Z","pid":72000,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:33.635Z","pid":72000,"hostname":"GOAT","msg":"Reading multiplepart uploadFileBySelector"}
+{"level":30,"time":"2025-03-27T17:17:33.636Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with input[name=\"my-file\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.636Z","pid":72000,"hostname":"GOAT","msg":"Uploading file(s) C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\selenium_tests\\log.html to input[name=\"my-file\"]"}
+{"level":30,"time":"2025-03-27T17:17:33.644Z","pid":72000,"hostname":"GOAT","msg":"Start of node method uncheckCheckbox"}
+{"level":30,"time":"2025-03-27T17:17:33.644Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with input[id=\"my-check-1\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.668Z","pid":72000,"hostname":"GOAT","msg":"End of node method uncheckCheckbox"}
+{"level":30,"time":"2025-03-27T17:17:33.671Z","pid":72000,"hostname":"GOAT","msg":"Start of node method checkCheckbox"}
+{"level":30,"time":"2025-03-27T17:17:33.671Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with input[id=\"my-check-2\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.689Z","pid":72000,"hostname":"GOAT","msg":"End of node method checkCheckbox"}
+{"level":30,"time":"2025-03-27T17:17:33.692Z","pid":72000,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T17:17:33.692Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [id=\"my-radio-2\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:33.707Z","pid":72000,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T17:17:33.711Z","pid":72000,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:33.711Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-date\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:34.287Z","pid":72000,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:17:34.289Z","pid":72000,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T17:17:34.290Z","pid":72000,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [id=\"my-radio-2\"] in page."}
+{"level":30,"time":"2025-03-27T17:17:34.302Z","pid":72000,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T17:18:42.516Z","pid":72000,"hostname":"GOAT","msg":"Removed page=349c3e66-cd91-4878-96ef-e608b9f1c6ae from context=15ed157d-8900-432c-ace1-4d95deb0a6b9 page stack"}
+{"level":30,"time":"2025-03-27T17:18:43.720Z","pid":72000,"hostname":"GOAT","msg":"Removed page=ee105527-1cd4-4bea-96a1-b46084f25fc7 from context=15ed157d-8900-432c-ace1-4d95deb0a6b9 page stack"}

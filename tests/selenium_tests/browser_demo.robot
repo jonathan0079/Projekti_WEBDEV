@@ -16,6 +16,9 @@ Test Web Form
     Uncheck Checkbox    input[id="my-check-1"]
     Check Checkbox      input[id="my-check-2"]
     Click    [id="my-radio-2"]
-    
+    Type Text    [name="my-date"]    6/21/1997    delay=0.05 s
+    Click    [id="my-radio-2"]
+    Click    input[name="my-range"]
+    Press Keys    input[name="my-range"]    Home
     Click With Options    button    delay=2 s
     Get Text       id=message    ==    Received!
