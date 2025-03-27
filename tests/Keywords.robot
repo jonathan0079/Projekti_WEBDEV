@@ -1,4 +1,4 @@
 *** Variables ***
-${Username}     somebody@example.com
-${Password}     SuperSecret!
+${Username}     jonathan
+${Password}     123
 ${Message}      Hello, Robot Framework!\nHow are you today?

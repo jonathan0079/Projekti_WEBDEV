@@ -36,10 +36,10 @@ const getUserByUsername = async (username) => {
   try {
     console.log('Getting user by username:', username);
     const [rows] = await promisePool.query(
-      'SELECT * FROM Users WHERE username = ?',
+      'SELECT * FROM users WHERE username = ?',
       [username]
     );
-
+    
 // Karttaa tietokannan kentät yhdenmukaisuuden vuoksi
 
     if (rows[0]) {

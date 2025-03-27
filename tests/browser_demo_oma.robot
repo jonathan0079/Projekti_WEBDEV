@@ -6,27 +6,26 @@ Resource    Keywords.robot
 ${URL}             http://localhost:5173
 ${USERNAME}        jonathan
 ${EMAIL}           test@example.com
-# Note: We define password without ${} for later use with $ prefix
-PASSWORD           123
 
 *** Test Cases ***
 Test Login Flow
-    New Browser    chromium    headless=No  
+    New Browser    chromium    headless=No
     New Page       ${URL}
     Get Title      *=    PasaGym
     Click          id=login-button
     
     # Test login form
     Wait For Elements State    id=login-modal    visible
-    Fill    id=login-username    ${USERNAME}
-    Fill    id=login-password    123
+    Type Text      id=login-username    ${USERNAME}    delay=0.1s
+    Fill Secret    id=login-password    123
+    Click          button.form-button >> text=Kirjaudu sisään
     
     # Verify successful login
     Wait For Elements State    id=user-greeting    visible
     Get Text       id=user-greeting    *=    Hei, ${USERNAME}
 
 Test Registration Flow
-    New Browser    chromium    headless=No  
+    New Browser    chromium    headless=No
     New Page       ${URL}
     Get Title      *=    PasaGym
     Click          id=login-button
@@ -38,10 +37,9 @@ Test Registration Flow
     Wait For Elements State    id=register-form    visible
     Type Text      id=register-username    ${USERNAME}_new    delay=0.1s
     Type Text      id=register-email       new_${EMAIL}       delay=0.1s
-    # Use $PASSWORD syntax (no curly braces)
-    Type Secret    id=register-password    $PASSWORD          delay=0.1s
-    Type Secret    id=register-confirm-password    $PASSWORD  delay=0.1s
-    Click          css=form#register-form button[type="submit"]
+    Fill Secret    id=register-password    123
+    Fill Secret    id=register-confirm-password    123
+    Click          button.form-button >> text=Rekisteröidy
     
     # Verify success message
     Wait For Elements State    id=register-error    visible

@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
 // Ruoka-aineet ja niiden ominaisuudet 
   const foodTypes = [
-    { name: 'pizza', calories: 100, spawnRate: 0.2, color: '#ff0000', radius: 15 },
-    { name: 'salad', calories: 200, spawnRate: 0.1, color: '#8B4513', radius: 20 },
-    { name: 'burger', calories: 500, spawnRate: 0.15, color: '#00ff00', radius: 18 },
-    { name: 'apple', calories: 50, spawnRate: 0.05, color: '#FFA500', radius: 25 },
-    { name: 'smoothie', calories: 60, spawnRate: 0.12, color: '#000000', radius: 17 }
+    { name: 'apple', calories: 10, spawnRate: 0.2, color: '#ff0000', radius: 15 },
+    { name: 'burger', calories: 50, spawnRate: 0.1, color: '#8B4513', radius: 20 },
+    { name: 'salad', calories: 5, spawnRate: 0.15, color: '#00ff00', radius: 18 },
+    { name: 'pizza', calories: 100, spawnRate: 0.05, color: '#FFA500', radius: 25 },
+    { name: 'soda', calories: 30, spawnRate: 0.12, color: '#000000', radius: 17 }
   ];
   
 // Lisää tapahtumakuuntelija kirjautumisnappiin pelistä

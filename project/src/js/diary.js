@@ -304,11 +304,24 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Editing entry:', entry);
     
 // Täytä lomake merkinnän tiedoilla
-    entryDateInput.value = entry.entry_date.split('T')[0];
+    entryDateInput.value = entry.entry_date.split('T')[0]; // Format YYYY-MM-DD
     moodInput.value = entry.mood || '';
     weightInput.value = entry.weight || '';
     sleepHoursInput.value = entry.sleep_hours || '';
     
+// Tarkista onko merkinnässä treenidataa (EI KÄYTETTY)
+    let workoutData = null;
+    if (entry.notes && entry.notes.includes('"activityType"')) {
+      try {
+        workoutData = JSON.parse(entry.notes);
+        notesInput.value = workoutData.notes || '';
+      } catch (e) {
+        console.log('Failed to parse workout data from notes:', e);
+        notesInput.value = entry.notes || '';
+      }
+    } else {
+      notesInput.value = entry.notes || '';
+    }
 
 // Vaihda lomakkeen otsikko ja painikkeen teksti
     formTitle.textContent = 'Muokkaa merkintää';
