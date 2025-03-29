@@ -16,6 +16,10 @@ Test Web Form
     Uncheck Checkbox    input[id="my-check-1"]
     Check Checkbox      input[id="my-check-2"]
     Click    [id="my-radio-2"]
+    Click    [name="my-colors"]
+    Click    [name="my-colors"]    delay=0.05 s
+    Press Keys    [name="my-color"]    Arrow Up
+    Press Keys    [name="my-color"]    ENTER
     Type Text    [name="my-date"]    6/21/1997    delay=0.05 s
     Click    [id="my-radio-2"]
     Click    input[name="my-range"]
