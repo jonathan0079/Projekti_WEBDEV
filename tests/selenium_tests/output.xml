@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-29T15:02:47.446575" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-31T10:25:22.434739" rpa="false" schemaversion="5">
 <suite id="s1" name="Browser Demo" source="C:\KOULU\Koodi\Projekti_WEBDEV\tests\selenium_tests\browser_demo.robot">
 <test id="s1-t1" name="Test Web Form" line="6">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-03-29T15:02:47.570195" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\selenium_tests\\browser\\traces\\temp\\3ec752a5-bbfb-43fe-984a-2f0df0f67d8f"}</msg>
-<msg time="2025-03-29T15:02:47.590425" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js using port 59896</msg>
-<msg time="2025-03-29T15:02:47.590548" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '59896']</msg>
-<msg time="2025-03-29T15:02:48.328750" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\selenium_tests\\browser\\traces\\temp\\3ec752a5-bbfb-43fe-984a-2f0df0f67d8f"}</msg>
+<msg time="2025-03-31T10:25:22.545587" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\selenium_tests\\browser\\traces\\temp\\2c7eff73-7790-449c-9454-7e67504d7332"}</msg>
+<msg time="2025-03-31T10:25:22.568199" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js using port 56523</msg>
+<msg time="2025-03-31T10:25:22.568350" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '56523']</msg>
+<msg time="2025-03-31T10:25:23.347243" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\selenium_tests\\browser\\traces\\temp\\2c7eff73-7790-449c-9454-7e67504d7332"}</msg>
 <arg>chromium</arg>
 <arg>headless=No</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-29T15:02:47.569700" elapsed="0.759296"/>
+<status status="PASS" start="2025-03-31T10:25:22.545098" elapsed="0.802402"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-03-29T15:02:48.578134" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
-<msg time="2025-03-29T15:02:48.578234" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-03-31T10:25:23.829383" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
+<msg time="2025-03-31T10:25:23.829451" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-29T15:02:48.329368" elapsed="0.249060"/>
+<status status="PASS" start="2025-03-31T10:25:23.347969" elapsed="0.481619"/>
 </kw>
 <kw name="Get Title" owner="Browser">
-<msg time="2025-03-29T15:02:48.588440" level="INFO">Title: 'Web form'</msg>
+<msg time="2025-03-31T10:25:23.836447" level="INFO">Title: 'Web form'</msg>
 <arg>==</arg>
 <arg>Web form</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-29T15:02:48.578751" elapsed="0.009792"/>
+<status status="PASS" start="2025-03-31T10:25:23.829872" elapsed="0.006723"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-03-29T15:02:48.589391" level="INFO">Types the text 'somebody@example.com' in the given field.</msg>
+<msg time="2025-03-31T10:25:23.837727" level="INFO">Types the text 'somebody@example.com' in the given field.</msg>
 <arg>[name="my-text"]</arg>
 <arg>${Username}</arg>
 <arg>delay=0.05 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:48.588807" elapsed="1.255235"/>
+<status status="PASS" start="2025-03-31T10:25:23.836899" elapsed="1.275465"/>
 </kw>
 <kw name="Type Secret" owner="Browser">
 <arg>[name="my-password"]</arg>
@@ -51,10 +51,10 @@
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:49.844327" elapsed="0.769032"/>
+<status status="PASS" start="2025-03-31T10:25:25.112691" elapsed="0.766337"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-03-29T15:02:50.614551" level="INFO">Types the text 'Hello, Robot Framework!
+<msg time="2025-03-31T10:25:25.880117" level="INFO">Types the text 'Hello, Robot Framework!
 How are you today?' in the given field.</msg>
 <arg>[name="my-textarea"]</arg>
 <arg>${Message}</arg>
@@ -62,10 +62,10 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:50.613777" elapsed="2.612797"/>
+<status status="PASS" start="2025-03-31T10:25:25.879324" elapsed="2.625240"/>
 </kw>
 <kw name="Select Options By" owner="Browser">
-<msg time="2025-03-29T15:02:53.227562" level="INFO">Selects the option(s) 3, delay=0.05 s by attribute SelectAttribute.value from element [name="my-select"].</msg>
+<msg time="2025-03-31T10:25:28.505627" level="INFO">Selects the option(s) 3, delay=0.05 s by attribute SelectAttribute.value from element [name="my-select"].</msg>
 <arg>[name="my-select"]</arg>
 <arg>value</arg>
 <arg>${DropdownValue}</arg>
@@ -73,17 +73,17 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.226895" elapsed="0.018450"/>
+<status status="PASS" start="2025-03-31T10:25:28.504885" elapsed="0.022967"/>
 </kw>
 <kw name="Type Text" owner="Browser">
-<msg time="2025-03-29T15:02:53.246398" level="INFO">Types the text 'Seattle' in the given field.</msg>
+<msg time="2025-03-31T10:25:28.529135" level="INFO">Types the text 'Seattle' in the given field.</msg>
 <arg>[name="my-datalist"]</arg>
 <arg>${DropdownDatalist}</arg>
 <arg>delay=0.05 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.245676" elapsed="0.445732"/>
+<status status="PASS" start="2025-03-31T10:25:28.528372" elapsed="0.440639"/>
 </kw>
 <kw name="Upload File By Selector" owner="Browser">
 <arg>input[name="my-file"]</arg>
@@ -91,46 +91,46 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Uploads file from ``path`` to file input element matched by selector.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.691728" elapsed="0.009882"/>
+<status status="PASS" start="2025-03-31T10:25:28.969443" elapsed="0.014039"/>
 </kw>
 <kw name="Uncheck Checkbox" owner="Browser">
 <arg>input[id="my-check-1"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Unchecks the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.701945" elapsed="0.017469"/>
+<status status="PASS" start="2025-03-31T10:25:28.983789" elapsed="0.018273"/>
 </kw>
 <kw name="Check Checkbox" owner="Browser">
 <arg>input[id="my-check-2"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.719685" elapsed="0.021675"/>
+<status status="PASS" start="2025-03-31T10:25:29.002411" elapsed="0.027531"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-03-29T15:02:53.742451" level="INFO">Clicks the element '[id="my-radio-2"]'.</msg>
+<msg time="2025-03-31T10:25:29.030786" level="INFO">Clicks the element '[id="my-radio-2"]'.</msg>
 <arg>[id="my-radio-2"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.741729" elapsed="0.017422"/>
+<status status="PASS" start="2025-03-31T10:25:29.030316" elapsed="0.019463"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-03-29T15:02:53.760079" level="INFO">Clicks the element '[name="my-colors"]'.</msg>
+<msg time="2025-03-31T10:25:29.050837" level="INFO">Clicks the element '[name="my-colors"]'.</msg>
 <arg>[name="my-colors"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-29T15:02:53.759478" elapsed="0.043841"/>
+<status status="PASS" start="2025-03-31T10:25:29.050156" elapsed="0.132304"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-03-29T15:02:53.804266" level="FAIL">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</msg>
+<msg time="2025-03-31T10:25:29.183250" level="FAIL">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</msg>
 <arg>[name="my-colors"]</arg>
 <arg>delay=0.05 s</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="FAIL" start="2025-03-29T15:02:53.803578" elapsed="0.001761">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</status>
+<status status="FAIL" start="2025-03-31T10:25:29.182724" elapsed="0.011516">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</status>
 </kw>
 <kw name="Press Keys" owner="Browser">
 <arg>[name="my-color"]</arg>
@@ -138,7 +138,7 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.805561" elapsed="0.000133"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.194493" elapsed="0.000138"/>
 </kw>
 <kw name="Press Keys" owner="Browser">
 <arg>[name="my-color"]</arg>
@@ -146,7 +146,7 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.805810" elapsed="0.000082"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.194802" elapsed="0.000106"/>
 </kw>
 <kw name="Type Text" owner="Browser">
 <arg>[name="my-date"]</arg>
@@ -155,21 +155,21 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.805994" elapsed="0.000077"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.195035" elapsed="0.000152"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>[id="my-radio-2"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.806341" elapsed="0.000087"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.195661" elapsed="0.000166"/>
 </kw>
 <kw name="Click" owner="Browser">
 <arg>input[name="my-range"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.806525" elapsed="0.000075"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.196029" elapsed="0.000144"/>
 </kw>
 <kw name="Press Keys" owner="Browser">
 <arg>input[name="my-range"]</arg>
@@ -177,7 +177,7 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given key combination into element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.806697" elapsed="0.000077"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.196276" elapsed="0.000067"/>
 </kw>
 <kw name="Click With Options" owner="Browser">
 <arg>button</arg>
@@ -185,7 +185,7 @@ How are you today?' in the given field.</msg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.806871" elapsed="0.000073"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.196434" elapsed="0.000066"/>
 </kw>
 <kw name="Get Text" owner="Browser">
 <arg>id=message</arg>
@@ -195,12 +195,12 @@ How are you today?' in the given field.</msg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-03-29T15:02:53.807037" elapsed="0.000072"/>
+<status status="NOT RUN" start="2025-03-31T10:25:29.196587" elapsed="0.000066"/>
 </kw>
-<msg time="2025-03-29T15:02:53.810491" level="INFO">Set timeout to: 10000</msg>
-<status status="FAIL" start="2025-03-29T15:02:47.569054" elapsed="6.238222">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</status>
+<msg time="2025-03-31T10:25:29.200602" level="INFO">Set timeout to: 10000</msg>
+<status status="FAIL" start="2025-03-31T10:25:22.544474" elapsed="6.652336">ValueError: Argument 'button' got value 'delay=0.05 s' that cannot be converted to MouseButton: MouseButton does not have member 'delay=0.05 s'. Available: 'left', 'middle' and 'right'</status>
 </test>
-<status status="FAIL" start="2025-03-29T15:02:47.447658" elapsed="6.363885"/>
+<status status="FAIL" start="2025-03-31T10:25:22.435677" elapsed="6.766533"/>
 </suite>
 <statistics>
 <total>
