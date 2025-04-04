@@ -1,5 +1,5 @@
-{"level":30,"time":"2025-04-04T10:46:17.766Z","pid":34864,"hostname":"GOAT","msg":"Listening on 53847"}
-(node:34864) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-04-04T11:00:12.074Z","pid":40820,"hostname":"GOAT","msg":"Listening on 61089"}
+(node:40820) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 ================= Original suppressed error =================
 Error: Browser has been closed.
@@ -14,7 +14,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-04-04T10:46:18.277Z","pid":34864,"hostname":"GOAT","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-04-04T10:46:18.668Z","pid":34864,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
-{"level":30,"time":"2025-04-04T10:46:18.668Z","pid":34864,"hostname":"GOAT","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-04-04T10:46:18.668Z","pid":34864,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-04T11:00:12.660Z","pid":40820,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-04T11:00:12.805Z","pid":40820,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-04T11:00:12.805Z","pid":40820,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-04T11:00:12.805Z","pid":40820,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
