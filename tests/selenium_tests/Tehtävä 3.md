@@ -1,6 +1,6 @@
 # Tehtävä 3
 
-[Testi-tiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/selenium_tests/browser_demo.robot)
+[Testitiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/selenium_tests/browser_demo.robot)
 [Avainsanat-tiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/selenium_tests/Keywords.robot)
 
 ## Tehtävänanto
