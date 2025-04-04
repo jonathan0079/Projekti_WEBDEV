@@ -1,6 +1,6 @@
 # Tehtävä 2
 
-[Testi-tiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Login_test.robot)
+[Testi-tiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Login_Register_test.robot)
 [Avainsanat-tiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Keys.robot)
 
 ## Tehtävänanto
