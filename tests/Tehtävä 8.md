@@ -13,6 +13,7 @@ raporttitiedostot (HTML) on luettavissa sivuston kautta.
 ![image](https://github.com/user-attachments/assets/6998c5b2-0721-4f46-854d-d2e5d6ede039)
 
 Pages käyttöönotto tapahtui tekemällä uuden repositorion pelkästään sivustoa varten
+
 ![image](https://github.com/user-attachments/assets/37be777a-dbcf-434c-a28c-d0a8bc77edf7)
 
 ![image](https://github.com/user-attachments/assets/205b99bc-6657-49ee-b5ed-2bb21e027389)
