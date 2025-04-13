@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # PasaGym - Terveyspäiväkirja
 
 PasaGym on parodia terveyden seurannan web-sovelluksesta, joka tarjoaa käyttäjille mahdollisuuden lisätä, muokata, sekä poistaa päiväkirjatietoa, laskea painoindeksiä, pelata huonosti kerrottua kaloripeliä ja etsiä lähimmän keksityn kuntosalin.
