@@ -1,7 +1,9 @@
 *** Variables ***
 ${URL}          http://localhost:5173
-${username}     crypt:clc8aLnp0Bhb1nmNYTdGMk34YkhG0HCmjRV7pZF/qC5NPxDBKHX1lDD7ahWQqwLhuqoNfsdx6oM=
-${password}     crypt:FkVY7v8eij7MoYpF5u/DZWYZimWYBWc0bAtRzn4Fzm18Zyzk66vI9l7jmyDkAAyDGwso
+${username}     jonathan
+${password}     123
+${username_crypted}    crypt:EU5SwYPvYZzpdoUqRmuaXzcAEyL3aM/5reKRJ7TygS3jJ+QsjNciIXp//73aNWbRkO4WgL9y7Og=
+${password_crypted}    crypt:HOGxfZaYhvRvYHDkCuOuZuhUL3MU16fE7w40MGxnHDms3HdYGeZSW4mZq8zxlJFhrrUY
 ${diary_mood}   Neutraali
 ${diary_date}   21061997
 ${diary_weight}  70.5

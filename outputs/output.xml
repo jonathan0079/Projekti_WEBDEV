@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-13T15:10:03.826295" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Crypt Test" source="C:\KOULU\Koodi\Projekti_WEBDEV\tests\login_crypt_test.robot">
+<test id="s1-t1" name="Test Login Flow" line="7">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-13T15:10:04.299511" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV\\outputs\\browser\\traces\\temp\\4d00624e-2d03-4c4e-925e-0aae68944fd2"}</msg>
+<msg time="2025-04-13T15:10:04.319193" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js using port 65026</msg>
+<msg time="2025-04-13T15:10:04.319313" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '65026']</msg>
+<msg time="2025-04-13T15:10:05.034407" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\outputs\\browser\\traces\\temp\\4d00624e-2d03-4c4e-925e-0aae68944fd2"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-13T15:10:04.298702" elapsed="0.735969"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-13T15:10:05.222669" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173</msg>
+<msg time="2025-04-13T15:10:05.222757" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-13T15:10:05.035061" elapsed="0.187820"/>
+</kw>
+<kw name="Ensure Logged Out">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-13T15:10:07.439762" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-13T15:10:07.439870" level="INFO">See also file:///C:/KOULU/Koodi/Projekti_WEBDEV/outputs/playwright-log.txt for additional details.</msg>
+<msg time="2025-04-13T15:10:07.440113" level="FAIL">TimeoutError: locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+  - waiting for locator('id=user-menu-trigger') to be visible
+    9 × locator resolved to hidden &lt;div id="user-menu-trigger" class="user-menu-trigger"&gt;…&lt;/div&gt;
+</msg>
+<arg>id=user-menu-trigger</arg>
+<arg>visible</arg>
+<arg>timeout=2s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-04-13T15:10:05.223767" elapsed="2.218941">TimeoutError: locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+  - waiting for locator('id=user-menu-trigger') to be visible
+    9 × locator resolved to hidden &lt;div id="user-menu-trigger" class="user-menu-trigger"&gt;…&lt;/div&gt;
+</status>
+</kw>
+<msg time="2025-04-13T15:10:07.442821" level="INFO">${is_logged_in} = False</msg>
+<var>${is_logged_in}</var>
+<arg>Wait For Elements State</arg>
+<arg>id=user-menu-trigger</arg>
+<arg>visible</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-13T15:10:05.223582" elapsed="2.219301"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${is_logged_in}</arg>
+<arg>Logout User</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-13T15:10:07.442989" elapsed="0.000177"/>
+</kw>
+<status status="PASS" start="2025-04-13T15:10:05.223221" elapsed="2.220002"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T15:10:07.443933" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T15:10:07.443429" elapsed="0.022415"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-13T15:10:07.466718" level="INFO">Fills the text '***' in the given field.</msg>
+<arg>id=login-username</arg>
+<arg>${username_crypted}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T15:10:07.466148" elapsed="0.008875"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-13T15:10:07.476107" level="INFO">Fills the text '***' in the given field.</msg>
+<arg>id=login-password</arg>
+<arg>${password_crypted}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T15:10:07.475524" elapsed="0.008935"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T15:10:07.485240" level="INFO">Clicks the element 'css=form#login-form button[type="submit"]'.</msg>
+<arg>css=form#login-form button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T15:10:07.484746" elapsed="0.803752"/>
+</kw>
+<msg time="2025-04-13T15:10:08.291782" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-13T15:10:04.295567" elapsed="3.993304"/>
+</test>
+<status status="PASS" start="2025-04-13T15:10:03.827409" elapsed="4.465110"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Crypt Test" id="s1" pass="1" fail="0" skip="0">Login Crypt Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

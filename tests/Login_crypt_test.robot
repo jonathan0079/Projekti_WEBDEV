@@ -11,8 +11,8 @@ Test Login Flow
     Ensure Logged Out
     Click    id=login-button
 
-    Fill Text    id=login-username    ${username}   
-    Fill Text    id=login-password    ${password}  
+    Fill Text    id=login-username    ${username_crypted}   
+    Fill Text    id=login-password    ${password_crypted}  
     Click    css=form#login-form button[type="submit"]
 
 *** Keywords ***
