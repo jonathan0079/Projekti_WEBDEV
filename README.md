@@ -5,3 +5,4 @@
 ### [Tehtävä 4](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Teht%C3%A4v%C3%A4%204.md)
 ### [Tehtävä 5](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Teht%C3%A4v%C3%A4%205.md)
 ### [Tehtävä 6](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Teht%C3%A4v%C3%A4%206.md)
+### [Tehtävä 7](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Teht%C3%A4v%C3%A4%206.md)
