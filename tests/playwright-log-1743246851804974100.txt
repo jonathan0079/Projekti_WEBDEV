@@ -1,0 +1,65 @@
+{"level":30,"time":"2025-03-29T11:14:12.321Z","pid":61412,"hostname":"GOAT","msg":"Listening on 65517"}
+(node:61412) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-29T11:14:12.438Z","pid":61412,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-29T11:14:12.596Z","pid":61412,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-29T11:14:12.597Z","pid":61412,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-29T11:14:12.597Z","pid":61412,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-29T11:14:12.601Z","pid":61412,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-29T11:14:12.602Z","pid":61412,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-29T11:14:12.612Z","pid":61412,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-29T11:14:12.715Z","pid":61412,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-29T11:14:12.715Z","pid":61412,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-29T11:14:12.767Z","pid":61412,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-29T11:14:12.771Z","pid":61412,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-29T11:14:12.772Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=header in page."}
+{"level":30,"time":"2025-03-29T11:14:12.792Z","pid":61412,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-29T11:14:12.796Z","pid":61412,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-29T11:14:12.796Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=user-menu-trigger in page."}
+{"level":30,"time":"2025-03-29T11:14:14.807Z","pid":61412,"hostname":"GOAT","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+[2m  - waiting for locator('id=user-menu-trigger') to be visible[22m
+[2m    9 × locator resolved to hidden <div id="user-menu-trigger" class="user-menu-trigger">…</div>[22m
+
+    at waitForElementState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11283:19)
+    at async PlaywrightServer.waitForElementsState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-03-29T11:14:14.827Z","pid":61412,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-29T11:14:14.827Z","pid":61412,"hostname":"GOAT","Take screenshot with options: ":{"path":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-29T11:14:15.043Z","pid":61412,"hostname":"GOAT","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-29T11:14:15.050Z","pid":61412,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-29T11:14:15.051Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-03-29T11:14:15.075Z","pid":61412,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-29T11:14:15.078Z","pid":61412,"hostname":"GOAT","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-03-29T11:14:15.078Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-username in page."}
+{"level":30,"time":"2025-03-29T11:14:15.085Z","pid":61412,"hostname":"GOAT","msg":"End of node method fillText"}
+{"level":30,"time":"2025-03-29T11:14:15.089Z","pid":61412,"hostname":"GOAT","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-03-29T11:14:15.089Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-password in page."}
+{"level":30,"time":"2025-03-29T11:14:15.096Z","pid":61412,"hostname":"GOAT","msg":"End of node method fillText"}
+{"level":30,"time":"2025-03-29T11:14:15.099Z","pid":61412,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-29T11:14:15.099Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=form#login-form button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-03-29T11:14:15.907Z","pid":61412,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-29T11:14:15.909Z","pid":61412,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-29T11:14:15.909Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=diary-nav-link in page."}
+{"level":30,"time":"2025-03-29T11:14:16.097Z","pid":61412,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-29T11:14:16.100Z","pid":61412,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-29T11:14:16.100Z","pid":61412,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=diary-entry-form in page."}
+{"level":30,"time":"2025-03-29T11:14:26.114Z","pid":61412,"hostname":"GOAT","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('id=diary-entry-form') to be visible[22m
+
+    at waitForElementState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11283:19)
+    at async PlaywrightServer.waitForElementsState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-03-29T11:14:26.133Z","pid":61412,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-29T11:14:26.133Z","pid":61412,"hostname":"GOAT","Take screenshot with options: ":{"path":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\browser\\screenshot\\fail-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-29T11:14:26.342Z","pid":61412,"hostname":"GOAT","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-29T11:18:29.882Z","pid":61412,"hostname":"GOAT","msg":"Removed page=2ab433bb-b86f-4caa-a905-b47faf8f8139 from context=d04d66d9-771e-46f3-893c-2afdbf04283b page stack"}

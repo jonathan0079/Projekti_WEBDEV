@@ -1,0 +1,290 @@
+{"level":30,"time":"2025-03-27T11:38:37.047Z","pid":45268,"hostname":"GOAT","msg":"Listening on 55112"}
+(node:45268) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T11:38:37.146Z","pid":45268,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:38:37.317Z","pid":45268,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T11:38:37.318Z","pid":45268,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:38:37.318Z","pid":45268,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T11:38:37.323Z","pid":45268,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T11:38:37.323Z","pid":45268,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T11:38:37.332Z","pid":45268,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T11:38:37.431Z","pid":45268,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T11:38:37.432Z","pid":45268,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T11:38:37.521Z","pid":45268,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T11:38:37.534Z","pid":45268,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:38:37.534Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-03-27T11:38:37.614Z","pid":45268,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:38:37.617Z","pid":45268,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:37.617Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-modal in page."}
+{"level":30,"time":"2025-03-27T11:38:37.621Z","pid":45268,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:37.630Z","pid":45268,"hostname":"GOAT","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-27T11:38:37.630Z","pid":45268,"hostname":"GOAT","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-27T11:38:37.633Z","pid":45268,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T11:38:37.633Z","pid":45268,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T11:38:37.665Z","pid":45268,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T11:38:37.665Z","pid":45268,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T11:38:37.702Z","pid":45268,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T11:38:37.712Z","pid":45268,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:38:37.712Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-03-27T11:38:37.770Z","pid":45268,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:38:37.772Z","pid":45268,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:38:37.772Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-tab in page."}
+{"level":30,"time":"2025-03-27T11:38:38.606Z","pid":45268,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:38:38.609Z","pid":45268,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:38.609Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-form in page."}
+{"level":30,"time":"2025-03-27T11:38:38.612Z","pid":45268,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:38.615Z","pid":45268,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:38.615Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-username in page."}
+{"level":30,"time":"2025-03-27T11:38:39.933Z","pid":45268,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:39.935Z","pid":45268,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:39.935Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-email in page."}
+{"level":30,"time":"2025-03-27T11:38:42.126Z","pid":45268,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:42.129Z","pid":45268,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:42.129Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-password in page."}
+{"level":30,"time":"2025-03-27T11:38:42.467Z","pid":45268,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:42.469Z","pid":45268,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:42.469Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-confirm-password in page."}
+{"level":30,"time":"2025-03-27T11:38:42.809Z","pid":45268,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:38:42.812Z","pid":45268,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:38:42.812Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=form#register-form button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-03-27T11:38:42.824Z","pid":45268,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:38:42.827Z","pid":45268,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:42.827Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.829Z","pid":45268,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:38:42.832Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.832Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.846Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing "}
+{"level":30,"time":"2025-03-27T11:38:42.846Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.857Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.858Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.865Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing "}
+{"level":30,"time":"2025-03-27T11:38:42.865Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.877Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.877Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.885Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.885Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.897Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.897Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.903Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.903Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.915Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.915Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.920Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.920Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.932Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.932Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.938Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.938Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.950Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.950Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.956Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.956Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.968Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.968Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.974Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.974Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.986Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:42.986Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:42.992Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:42.993Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.004Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.004Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.011Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.011Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.023Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.023Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.030Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.030Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.042Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.042Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.048Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.048Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.060Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.060Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.066Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.066Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.077Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.077Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.083Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.083Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.095Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.095Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.101Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.101Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.113Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.113Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.120Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.120Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.132Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.132Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.138Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.138Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.150Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.150Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.157Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.157Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.169Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.169Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.174Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.174Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.186Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.186Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.191Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.191Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.202Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.203Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.207Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.207Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.219Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.219Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.224Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.224Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.236Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.236Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.241Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.241Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.253Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.253Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.259Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.259Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.271Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.271Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.277Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.277Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.288Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.288Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.294Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.294Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.306Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.306Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.312Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.312Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.324Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.324Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.329Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.329Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.341Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.341Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.346Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.346Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.358Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.358Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.363Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.363Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.375Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.375Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.380Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.380Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.392Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.392Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.397Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.397Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.409Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.409Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.414Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.414Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.426Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.426Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.431Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.431Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.443Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.443Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.448Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.448Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.459Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.459Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.465Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.465Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.477Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.477Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.482Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.482Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.494Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.494Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.499Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.499Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.510Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.510Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.516Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.516Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.527Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.527Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.532Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.532Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.543Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.543Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.548Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.548Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.560Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.560Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.564Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.564Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.576Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.576Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.581Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.581Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.592Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.593Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.598Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.598Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.610Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.610Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.616Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.616Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.628Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.628Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.634Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.634Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.646Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.646Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.652Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.652Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.663Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.663Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.669Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.669Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.681Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.681Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.687Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.687Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.699Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.699Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.704Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.704Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.717Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.717Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.722Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.722Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.734Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.734Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.741Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.741Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.753Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.753Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.759Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.759Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.771Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.771Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.776Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.776Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.788Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.788Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.793Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.793Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.805Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.805Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.810Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.811Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.822Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.822Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.828Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.828Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.840Z","pid":45268,"hostname":"GOAT","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.840Z","pid":45268,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-error in page."}
+{"level":30,"time":"2025-03-27T11:38:43.846Z","pid":45268,"hostname":"GOAT","msg":"Retrieved text for element id=register-error containing Username already exists"}
+{"level":30,"time":"2025-03-27T11:38:43.846Z","pid":45268,"hostname":"GOAT","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-27T11:38:43.849Z","pid":45268,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-03-27T11:38:43.849Z","pid":45268,"hostname":"GOAT","Take screenshot with options: ":{"path":"C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\tests\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-03-27T11:38:43.984Z","pid":45268,"hostname":"GOAT","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-03-27T11:39:20.674Z","pid":45268,"hostname":"GOAT","msg":"Removed page=a2dd1d50-652f-4acb-8eed-23981ff4c88c from context=6f3f3fb1-8a7d-44ce-bfbe-3cbd7d51880e page stack"}
+{"level":30,"time":"2025-03-27T11:39:20.675Z","pid":45268,"hostname":"GOAT","msg":"Removed page=9447e812-a209-477f-a967-47785c6f9908 from context=6f3f3fb1-8a7d-44ce-bfbe-3cbd7d51880e page stack"}

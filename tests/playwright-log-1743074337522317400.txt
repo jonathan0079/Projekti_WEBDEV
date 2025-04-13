@@ -1,0 +1,46 @@
+{"level":30,"time":"2025-03-27T11:18:58.036Z","pid":40516,"hostname":"GOAT","msg":"Listening on 65244"}
+(node:40516) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T11:18:58.146Z","pid":40516,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:18:58.302Z","pid":40516,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T11:18:58.302Z","pid":40516,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:18:58.302Z","pid":40516,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T11:18:58.307Z","pid":40516,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T11:18:58.307Z","pid":40516,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T11:18:58.315Z","pid":40516,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T11:18:58.416Z","pid":40516,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T11:18:58.416Z","pid":40516,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T11:18:58.467Z","pid":40516,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T11:18:58.480Z","pid":40516,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:18:58.480Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-03-27T11:18:58.599Z","pid":40516,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:18:58.602Z","pid":40516,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:18:58.602Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-modal in page."}
+{"level":30,"time":"2025-03-27T11:18:58.605Z","pid":40516,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:18:58.608Z","pid":40516,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:18:58.608Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-username in page."}
+{"level":30,"time":"2025-03-27T11:18:59.479Z","pid":40516,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:18:59.489Z","pid":40516,"hostname":"GOAT","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-03-27T11:18:59.489Z","pid":40516,"hostname":"GOAT","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-03-27T11:18:59.492Z","pid":40516,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T11:18:59.492Z","pid":40516,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T11:18:59.519Z","pid":40516,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T11:18:59.519Z","pid":40516,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T11:18:59.570Z","pid":40516,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T11:18:59.602Z","pid":40516,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:18:59.602Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-03-27T11:18:59.635Z","pid":40516,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:18:59.638Z","pid":40516,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-27T11:18:59.638Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-tab in page."}
+{"level":30,"time":"2025-03-27T11:19:00.443Z","pid":40516,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-03-27T11:19:00.446Z","pid":40516,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:19:00.446Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-form in page."}
+{"level":30,"time":"2025-03-27T11:19:00.448Z","pid":40516,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-03-27T11:19:00.452Z","pid":40516,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:19:00.452Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-username in page."}
+{"level":30,"time":"2025-03-27T11:19:01.759Z","pid":40516,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:19:01.761Z","pid":40516,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:19:01.761Z","pid":40516,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=register-email in page."}
+{"level":30,"time":"2025-03-27T11:19:03.951Z","pid":40516,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T11:19:29.059Z","pid":40516,"hostname":"GOAT","msg":"Removed page=1813b112-038d-4ebb-9fe7-31e8766f5080 from context=467f4201-ce5e-49ce-ab06-5221b62f591c page stack"}
+{"level":30,"time":"2025-03-27T11:19:29.062Z","pid":40516,"hostname":"GOAT","msg":"Removed page=e8b5fb6e-3938-4c07-adc1-b58bf1213cc1 from context=467f4201-ce5e-49ce-ab06-5221b62f591c page stack"}

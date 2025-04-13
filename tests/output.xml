@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-13T12:29:45.481636" rpa="false" schemaversion="5">
+<suite id="s1" name="DiaryEntry test" source="C:\KOULU\Koodi\Projekti_WEBDEV\Projekti_WEBDEV\tests\DiaryEntry_test.robot">
+<test id="s1-t1" name="Test Diary Entry Creation" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-04-13T12:29:45.614640" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\KOULU\\Koodi\\Projekti_WEBDEV\\Projekti_WEBDEV\\tests\\browser\\traces\\temp\\1c96d05d-4559-4455-b388-6a5d7ea0839b"}</msg>
+<msg time="2025-04-13T12:29:45.637386" level="INFO">Starting Browser process C:\KOULU\Koodi\Projekti_WEBDEV\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js using port 62569</msg>
+<msg time="2025-04-13T12:29:45.637530" level="INFO">Node startup parameters: ['node', 'C:\\KOULU\\Koodi\\Projekti_WEBDEV\\Projekti_WEBDEV\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '62569']</msg>
+<msg time="2025-04-13T12:29:46.359050" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\Projekti_WEBDEV\\tests\\browser\\traces\\temp\\1c96d05d-4559-4455-b388-6a5d7ea0839b"}</msg>
+<arg>chromium</arg>
+<arg>headless=No</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-04-13T12:29:45.614141" elapsed="0.745110"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-04-13T12:29:46.535846" level="INFO">Successfully initialized new page object and opened url: http://localhost:5173</msg>
+<msg time="2025-04-13T12:29:46.535958" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-04-13T12:29:46.359568" elapsed="0.176601"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-13T12:29:46.559331" level="INFO">Waited for Element with selector css=header at state visible</msg>
+<arg>css=header</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-13T12:29:46.536591" elapsed="0.022874"/>
+</kw>
+<kw name="Ensure Logged Out">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-13T12:29:48.782146" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-13T12:29:48.782254" level="INFO">See also file:///C:/KOULU/Koodi/Projekti_WEBDEV/Projekti_WEBDEV/tests/playwright-log-1744536585579066400.txt for additional details.</msg>
+<msg time="2025-04-13T12:29:48.782506" level="FAIL">TimeoutError: locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+  - waiting for locator('id=user-menu-trigger') to be visible
+    9 × locator resolved to hidden &lt;div id="user-menu-trigger" class="user-menu-trigger"&gt;…&lt;/div&gt;
+</msg>
+<arg>id=user-menu-trigger</arg>
+<arg>visible</arg>
+<arg>timeout=2s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-04-13T12:29:46.560671" elapsed="2.224582">TimeoutError: locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+  - waiting for locator('id=user-menu-trigger') to be visible
+    9 × locator resolved to hidden &lt;div id="user-menu-trigger" class="user-menu-trigger"&gt;…&lt;/div&gt;
+</status>
+</kw>
+<msg time="2025-04-13T12:29:48.785380" level="INFO">${is_logged_in} = False</msg>
+<var>${is_logged_in}</var>
+<arg>Wait For Elements State</arg>
+<arg>id=user-menu-trigger</arg>
+<arg>visible</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-13T12:29:46.560370" elapsed="2.225029"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${is_logged_in}</arg>
+<arg>Logout User</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-13T12:29:48.785509" elapsed="0.000191"/>
+</kw>
+<status status="PASS" start="2025-04-13T12:29:46.559837" elapsed="2.225927"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T12:29:48.786282" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:48.785948" elapsed="0.027704"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-13T12:29:48.814456" level="INFO">Fills the text 'Jonathan' in the given field.</msg>
+<arg>id=login-username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:48.813895" elapsed="0.009286"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-04-13T12:29:48.824070" level="INFO">Fills the text '123' in the given field.</msg>
+<arg>id=login-password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:48.823502" elapsed="0.008747"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T12:29:48.833191" level="INFO">Clicks the element 'css=form#login-form button[type="submit"]'.</msg>
+<arg>css=form#login-form button[type="submit"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:48.832573" elapsed="0.797275"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T12:29:49.630997" level="INFO">Clicks the element 'id=diary-nav-link'.</msg>
+<arg>id=diary-nav-link</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:49.630310" elapsed="0.120544"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-04-13T12:29:49.773136" level="INFO">Waited for Element with selector id=diary-form at state visible</msg>
+<arg>id=diary-form</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-04-13T12:29:49.751287" elapsed="0.021998"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-13T12:29:49.774340" level="INFO">Types the text '21061997' in the given field.</msg>
+<arg>input[id="entry-date"]</arg>
+<arg>${diary_date}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:49.773565" elapsed="0.532941"/>
+</kw>
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-04-13T12:29:50.307224" level="INFO">Selects the option(s) Neutraali, delay=0.05 s by attribute SelectAttribute.value from element [id="mood"].</msg>
+<arg>[id="mood"]</arg>
+<arg>value</arg>
+<arg>${diary_mood}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:50.306759" elapsed="0.016286"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-13T12:29:50.324023" level="INFO">Types the text '70.5' in the given field.</msg>
+<arg>input[id="weight"]</arg>
+<arg>${diary_weight}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:50.323474" elapsed="0.263344"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-13T12:29:50.588006" level="INFO">Types the text '8' in the given field.</msg>
+<arg>input[id="sleep-hours"]</arg>
+<arg>${diary_sleep}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:50.587207" elapsed="0.076752"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-13T12:29:50.664751" level="INFO">Types the text 'Tämä on Robot Framework testi' in the given field.</msg>
+<arg>textarea[id="notes"]</arg>
+<arg>${diary_message}</arg>
+<arg>delay=0.05 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:50.664251" elapsed="1.818970"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-13T12:29:52.484021" level="INFO">Clicks the element '[id="submit-entry"]'.</msg>
+<arg>[id="submit-entry"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-13T12:29:52.483550" elapsed="0.013791"/>
+</kw>
+<msg time="2025-04-13T12:29:52.500278" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-13T12:29:45.613555" elapsed="6.884127"/>
+</test>
+<status status="PASS" start="2025-04-13T12:29:45.482574" elapsed="7.018419"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DiaryEntry test" id="s1" pass="1" fail="0" skip="0">DiaryEntry test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

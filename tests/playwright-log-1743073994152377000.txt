@@ -1,0 +1,42 @@
+{"level":30,"time":"2025-03-27T11:13:14.651Z","pid":36964,"hostname":"GOAT","msg":"Listening on 64928"}
+(node:36964) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T11:13:14.766Z","pid":36964,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:13:14.938Z","pid":36964,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T11:13:14.939Z","pid":36964,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T11:13:14.939Z","pid":36964,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T11:13:14.944Z","pid":36964,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T11:13:14.944Z","pid":36964,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T11:13:14.953Z","pid":36964,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T11:13:15.050Z","pid":36964,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T11:13:15.050Z","pid":36964,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T11:13:15.394Z","pid":36964,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T11:13:15.405Z","pid":36964,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T11:13:15.405Z","pid":36964,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-27T11:13:17.202Z","pid":36964,"hostname":"GOAT","msg":"Removed page=3a84ca43-e655-4ede-8a68-c7b03892126a from context=efdd530f-4e54-411c-a682-6ab23615bf4d page stack"}
+{"level":30,"time":"2025-03-27T11:13:17.203Z","pid":36964,"hostname":"GOAT","msg":"Error of node method  typeText"}
+================= Original suppressed error =================
+locator.type: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('[name="my-text"]')[22m
+[2m    - locator resolved to <input type="text" name="my-text" id="my-text-id" myprop="myvalue" class="form-control"/>[22m
+[2m  - elementHandle.type("somebody@example.com")[22m
+
+    at typeText (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:11838:17)
+    at async PlaywrightServer.typeText (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+=============================================================
+{"level":30,"time":"2025-03-27T11:13:17.223Z","pid":36964,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-03-27T11:13:17.223Z","pid":36964,"hostname":"GOAT","msg":"Error of node method  takeScreenshot"}

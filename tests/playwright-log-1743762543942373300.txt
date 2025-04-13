@@ -1,0 +1,59 @@
+{"level":30,"time":"2025-04-04T10:29:04.476Z","pid":25352,"hostname":"GOAT","msg":"Listening on 52853"}
+(node:25352) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-04-04T10:29:04.565Z","pid":25352,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-04T10:29:04.701Z","pid":25352,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-04T10:29:04.701Z","pid":25352,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-04T10:29:04.701Z","pid":25352,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-04T10:29:04.706Z","pid":25352,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T10:29:04.707Z","pid":25352,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T10:29:04.715Z","pid":25352,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-04-04T10:29:04.818Z","pid":25352,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T10:29:04.819Z","pid":25352,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T10:29:04.878Z","pid":25352,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T10:29:04.890Z","pid":25352,"hostname":"GOAT","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T10:29:04.890Z","pid":25352,"hostname":"GOAT","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T10:29:04.893Z","pid":25352,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T10:29:04.893Z","pid":25352,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T10:29:04.918Z","pid":25352,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T10:29:04.918Z","pid":25352,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T10:29:04.959Z","pid":25352,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T10:29:04.964Z","pid":25352,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T10:29:04.964Z","pid":25352,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=header in page."}
+{"level":30,"time":"2025-04-04T10:29:04.987Z","pid":25352,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T10:29:04.997Z","pid":25352,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-04T10:29:04.997Z","pid":25352,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=user-menu-trigger in page."}
+{"level":30,"time":"2025-04-04T10:29:11.136Z","pid":25352,"hostname":"GOAT","msg":"Removed page=859527af-bf4f-4dbd-9b82-e933df58b0ce from context=9239df41-d4ac-4909-b73b-2106d4797ce2 page stack"}
+{"level":40,"time":"2025-04-04T10:29:11.137Z","pid":25352,"hostname":"GOAT","msg":"Supress locator.click: Target page, context or browser has been closed error"}
+{"level":30,"time":"2025-04-04T10:29:11.137Z","pid":25352,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-04-04T10:29:11.139Z","pid":25352,"hostname":"GOAT","msg":"Removed page=9f6a0411-3182-4aa1-8de6-ebc7ebe76f41 from context=9239df41-d4ac-4909-b73b-2106d4797ce2 page stack"}
+{"level":30,"time":"2025-04-04T10:29:11.141Z","pid":25352,"hostname":"GOAT","msg":"Start of node method click"}
+================= Original suppressed error =================
+Error: Could not find active page
+    at exists (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at findLocator (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10682:3)
+    at internalClick (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11888:25)
+    at click (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11871:24)
+    at PlaywrightServer.click (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+=============================================================
+{"level":30,"time":"2025-04-04T10:29:11.142Z","pid":25352,"hostname":"GOAT","msg":"Error of node method  click"}
+{"level":30,"time":"2025-04-04T10:29:11.159Z","pid":25352,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-04-04T10:29:11.159Z","pid":25352,"hostname":"GOAT","msg":"Error of node method  takeScreenshot"}

@@ -1,0 +1,109 @@
+{"level":30,"time":"2025-03-27T12:46:45.468Z","pid":39292,"hostname":"GOAT","msg":"Listening on 60345"}
+(node:39292) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T12:46:45.585Z","pid":39292,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T12:46:45.752Z","pid":39292,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T12:46:45.752Z","pid":39292,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T12:46:45.752Z","pid":39292,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T12:46:45.756Z","pid":39292,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T12:46:45.757Z","pid":39292,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T12:46:45.764Z","pid":39292,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T12:46:45.862Z","pid":39292,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T12:46:45.862Z","pid":39292,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T12:46:45.982Z","pid":39292,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T12:46:45.995Z","pid":39292,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:45.995Z","pid":39292,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-27T12:46:48.204Z","pid":39292,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:48.207Z","pid":39292,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:48.207Z","pid":39292,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-27T12:46:49.524Z","pid":39292,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:49.527Z","pid":39292,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:49.527Z","pid":39292,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-27T12:46:54.106Z","pid":39292,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T12:46:54.109Z","pid":39292,"hostname":"GOAT","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-27T12:46:54.109Z","pid":39292,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-select\"] in page."}
+{"level":30,"time":"2025-03-27T12:47:01.713Z","pid":39292,"hostname":"GOAT","msg":"Removed page=e314fce2-e8cc-415f-a442-fa4e5fe08aa0 from context=05d1a01f-7748-4c41-8869-ee103fbb4200 page stack"}
+{"level":30,"time":"2025-03-27T12:47:01.713Z","pid":39292,"hostname":"GOAT","msg":"Error of node method  selectOption"}
+================= Original suppressed error =================
+locator.selectOption: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('[name="my-select"]')[22m
+[2m    - locator resolved to <select name="my-select" class="form-select">…</select>[22m
+[2m  - attempting select option action[22m
+[2m    2 × waiting for element to be visible and enabled[22m
+[2m      - did not find some options[22m
+[2m    - retrying select option action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible and enabled[22m
+[2m      - did not find some options[22m
+[2m    - retrying select option action[22m
+[2m      - waiting 100ms[22m
+[2m    15 × waiting for element to be visible and enabled[22m
+[2m       - did not find some options[22m
+[2m     - retrying select option action[22m
+[2m       - waiting 500ms[22m
+
+    at selectOption (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:11814:32)
+    at async PlaywrightServer.selectOption (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+=============================================================
+{"level":30,"time":"2025-03-27T12:47:01.739Z","pid":39292,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-03-27T12:47:01.740Z","pid":39292,"hostname":"GOAT","msg":"Error of node method  takeScreenshot"}
+node:internal/modules/cjs/loader:1244
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module './../../../package.json'
+Require stack:
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\utils\userAgent.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\registry\browserFetcher.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\registry\index.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\index.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\remote\playwrightConnection.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\remote\playwrightServer.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\androidServerImpl.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\inProcessFactory.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\inprocess.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\index.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright\index.js
+- C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1244:15)
+    at Function._load (node:internal/modules/cjs/loader:1070:27)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)
+    at Module.require (node:internal/modules/cjs/loader:1335:12)
+    at require (node:internal/modules/helpers:136:16)
+    at getPlaywrightVersion (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\utils\userAgent.js:89:54)
+    at HarTracer.stop (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\har\harTracer.js:417:50)
+    at Tracing.abort (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\trace\recorder\tracing.js:260:21)
+    at CRBrowserContext._didCloseInternal (C:\KOULU\Koodi\Projekti_WEBDEV-2\.venv\Lib\site-packages\Browser\wrapper\node_modules\playwright-core\lib\server\browserContext.js:202:18) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\utils\\userAgent.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\registry\\browserFetcher.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\registry\\index.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\server\\index.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\remote\\playwrightConnection.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\remote\\playwrightServer.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\androidServerImpl.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\inProcessFactory.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\lib\\inprocess.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright-core\\index.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\playwright\\index.js',
+    'C:\\KOULU\\Koodi\\Projekti_WEBDEV-2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js'
+  ]
+}
+
+Node.js v22.13.0

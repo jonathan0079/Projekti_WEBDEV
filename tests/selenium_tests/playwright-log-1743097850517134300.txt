@@ -1,0 +1,28 @@
+{"level":30,"time":"2025-03-27T17:50:51.055Z","pid":41188,"hostname":"GOAT","msg":"Listening on 55469"}
+(node:41188) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-27T17:50:51.139Z","pid":41188,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-27T17:50:51.314Z","pid":41188,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-27T17:50:51.314Z","pid":41188,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-27T17:50:51.314Z","pid":41188,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-27T17:50:51.319Z","pid":41188,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-27T17:50:51.319Z","pid":41188,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-27T17:50:51.329Z","pid":41188,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-03-27T17:50:51.467Z","pid":41188,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-27T17:50:51.468Z","pid":41188,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-03-27T17:50:51.614Z","pid":41188,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-27T17:50:51.629Z","pid":41188,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:50:51.629Z","pid":41188,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-27T17:50:52.929Z","pid":41188,"hostname":"GOAT","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-27T17:50:52.931Z","pid":41188,"hostname":"GOAT","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-27T17:50:52.931Z","pid":41188,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+================= Original suppressed error =================
+locator.fill: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('[name="my-password"]')[22m
+
+    at typeText (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11836:19)
+    at async PlaywrightServer.typeText (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28)
+=============================================================
+{"level":30,"time":"2025-03-27T17:50:54.437Z","pid":41188,"hostname":"GOAT","msg":"Removed page=e1d7bab9-c92d-4f8b-b5ed-70edaf42b90e from context=18103d85-02e2-4b07-927a-f3f95d944984 page stack"}
+{"level":30,"time":"2025-03-27T17:50:54.438Z","pid":41188,"hostname":"GOAT","msg":"Error of node method  typeText"}

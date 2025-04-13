@@ -1,0 +1,56 @@
+{"level":30,"time":"2025-04-04T11:00:34.157Z","pid":37956,"hostname":"GOAT","msg":"Listening on 61123"}
+(node:37956) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-04-04T11:00:34.274Z","pid":37956,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-04T11:00:34.420Z","pid":37956,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-04T11:00:34.420Z","pid":37956,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-04T11:00:34.420Z","pid":37956,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-04T11:00:34.424Z","pid":37956,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T11:00:34.425Z","pid":37956,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T11:00:34.433Z","pid":37956,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-04-04T11:00:34.526Z","pid":37956,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T11:00:34.526Z","pid":37956,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T11:00:34.588Z","pid":37956,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T11:00:34.592Z","pid":37956,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T11:00:34.593Z","pid":37956,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=user-menu-trigger in page."}
+{"level":30,"time":"2025-04-04T11:00:36.605Z","pid":37956,"hostname":"GOAT","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 2000ms exceeded.
+Call log:
+[2m  - waiting for locator('id=user-menu-trigger') to be visible[22m
+[2m    9 × locator resolved to hidden <div id="user-menu-trigger" class="user-menu-trigger">…</div>[22m
+
+    at waitForElementState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11283:19)
+    at async PlaywrightServer.waitForElementsState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-04-04T11:00:36.623Z","pid":37956,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-04-04T11:00:36.624Z","pid":37956,"hostname":"GOAT","Take screenshot with options: ":{"path":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\tests\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-04-04T11:00:36.823Z","pid":37956,"hostname":"GOAT","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-04-04T11:00:36.830Z","pid":37956,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-04T11:00:36.830Z","pid":37956,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2025-04-04T11:00:36.852Z","pid":37956,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-04-04T11:00:36.856Z","pid":37956,"hostname":"GOAT","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-04-04T11:00:36.856Z","pid":37956,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-username in page."}
+{"level":30,"time":"2025-04-04T11:00:36.862Z","pid":37956,"hostname":"GOAT","msg":"End of node method fillText"}
+{"level":30,"time":"2025-04-04T11:00:36.865Z","pid":37956,"hostname":"GOAT","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-04-04T11:00:36.865Z","pid":37956,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-password in page."}
+{"level":30,"time":"2025-04-04T11:00:36.871Z","pid":37956,"hostname":"GOAT","msg":"End of node method fillText"}
+{"level":30,"time":"2025-04-04T11:00:36.874Z","pid":37956,"hostname":"GOAT","msg":"Start of node method click"}
+{"level":30,"time":"2025-04-04T11:00:36.874Z","pid":37956,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=form#login-form button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-04-04T11:00:37.684Z","pid":37956,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-04-04T11:09:31.771Z","pid":37956,"hostname":"GOAT","msg":"Removed page=9b2e14d8-70c3-46b1-ba4b-ebe15735a5ea from context=09185b29-aa36-44bf-9331-7fa760c9a05a page stack"}

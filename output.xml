@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-27T15:06:32.808491" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser Demo" source="c:\KOULU\Koodi\Projekti_WEBDEV-2\tests\selenium_tests\browser_demo.robot">
+<test id="s1-t1" name=" Select Dropdown Option" line="13">
+<error>
+<msg time="2025-03-27T15:06:32.935571" level="FAIL">Non-existing setting 'name="my-select"'.</msg>
+<value>[name="my-select"]</value>
+<status status="FAIL" start="2025-03-27T15:06:32.935348" elapsed="0.005025">Non-existing setting 'name="my-select"'.</status>
+</error>
+<kw name="Click With Options" owner="Browser">
+<arg>button</arg>
+<arg>delay=2 s</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T15:06:32.941271" elapsed="0.000241"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<arg>id=message</arg>
+<arg>==</arg>
+<arg>Received!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-03-27T15:06:32.942095" elapsed="0.000280"/>
+</kw>
+<status status="FAIL" start="2025-03-27T15:06:32.934796" elapsed="0.007931">Non-existing setting 'name="my-select"'.</status>
+</test>
+<status status="FAIL" start="2025-03-27T15:06:32.815582" elapsed="0.154728"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Browser Demo" id="s1" pass="0" fail="1" skip="0">Browser Demo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-27T15:06:32.968338" level="ERROR">Calling method '_end_test' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\makyo\AppData\Roaming\Python\Python313\site-packages\Browser\wrapper</msg>
+<msg time="2025-03-27T15:06:32.992172" level="ERROR">Calling method '_end_suite' of listener 'Browser' failed: 
+#############################################################
+#                                                           #
+#  RF-Browser dependencies not found in installation path!  #
+#           Run `rfbrowser init` to install.                #
+#                                                           #
+#############################################################
+Installation path: C:\Users\makyo\AppData\Roaming\Python\Python313\site-packages\Browser\wrapper</msg>
+</errors>
+</robot>

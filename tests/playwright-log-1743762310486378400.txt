@@ -1,0 +1,25 @@
+{"level":30,"time":"2025-04-04T10:25:11.015Z","pid":35780,"hostname":"GOAT","msg":"Listening on 53987"}
+(node:35780) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-04-04T10:25:11.113Z","pid":35780,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-04T10:25:11.246Z","pid":35780,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-04T10:25:11.247Z","pid":35780,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-04T10:25:11.247Z","pid":35780,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-04T10:25:11.253Z","pid":35780,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T10:25:11.253Z","pid":35780,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T10:25:11.261Z","pid":35780,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-04-04T10:25:11.360Z","pid":35780,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T10:25:11.361Z","pid":35780,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T10:25:11.421Z","pid":35780,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T10:25:11.433Z","pid":35780,"hostname":"GOAT","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T10:25:11.433Z","pid":35780,"hostname":"GOAT","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2025-04-04T10:25:11.437Z","pid":35780,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-04T10:25:11.437Z","pid":35780,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-04T10:25:11.464Z","pid":35780,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-04T10:25:11.464Z","pid":35780,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-04T10:25:11.509Z","pid":35780,"hostname":"GOAT","msg":"End of node method newPage"}
+{"level":30,"time":"2025-04-04T10:25:11.514Z","pid":35780,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T10:25:11.515Z","pid":35780,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=header in page."}
+{"level":30,"time":"2025-04-04T10:25:11.535Z","pid":35780,"hostname":"GOAT","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-04-04T10:25:16.352Z","pid":35780,"hostname":"GOAT","msg":"Removed page=60b2c5cc-8dc3-43b7-964f-994fef36e26f from context=e0ab9743-52ec-4381-821c-b3aa63aa7b25 page stack"}
+{"level":30,"time":"2025-04-04T10:25:16.355Z","pid":35780,"hostname":"GOAT","msg":"Removed page=33421ef6-3fbb-4acd-a3c9-c18574ad9191 from context=e0ab9743-52ec-4381-821c-b3aa63aa7b25 page stack"}
