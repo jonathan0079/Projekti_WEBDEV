@@ -16,6 +16,7 @@ Pages käyttöönotto tapahtui tekemällä uuden repositorion pelkästään sivu
 
 ![image](https://github.com/user-attachments/assets/37be777a-dbcf-434c-a28c-d0a8bc77edf7)
 
-![image](https://github.com/user-attachments/assets/205b99bc-6657-49ee-b5ed-2bb21e027389)
-- Linkitys tapahtui ensin laittamalla samaan kansioon pages-kansion ja sen index html-tiedoston
+![image](https://github.com/user-attachments/assets/8dd60b13-7148-4a6b-8bfe-eb1d960f8389)
+
+- Linkitys tapahtui laittamalla outputs -kansioon README.md tiedosto, jonka kautta github.io näyttää tiet raportteihin ja lokeihin
 - sen jälkeen itse index tiedostossa laitoin html linkityksen siten että index lataa outputskansion log.html sisällön
