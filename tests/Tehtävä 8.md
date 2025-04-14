@@ -1,7 +1,7 @@
 # Tehtävä 8
 
 [Testitiedosto](https://github.com/jonathan0079/Projekti_WEBDEV/blob/projekti-terveyssovelluksen-kehitys/tests/Login_Register_test.robot)
-[linkki github.io -sivulle](https://jonathan0079.github.io/Projekti_WEBDEV/)
+[linkki github.io -sivulle](https://jonathan0079.github.io/Projekti_WEBDEV/outputs/)
 
 ## Tehtävänanto
 Tee omalle GitHub-kansiollesi github.io-sivusto. Muokkaa projektiasi niin, että testien loki- ja
