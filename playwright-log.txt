@@ -40,3 +40,4 @@ Call log:
 {"level":30,"time":"2025-04-24T08:20:51.046Z","pid":39828,"hostname":"GOAT","msg":"Start of node method click"}
 {"level":30,"time":"2025-04-24T08:20:51.046Z","pid":39828,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=form#login-form button[type=\"submit\"] in page."}
 {"level":30,"time":"2025-04-24T08:20:51.836Z","pid":39828,"hostname":"GOAT","msg":"End of node method click"}
+{"level":30,"time":"2025-04-24T08:36:27.997Z","pid":39828,"hostname":"GOAT","msg":"Removed page=c48c3f53-8056-4e30-92db-f286148adf87 from context=5a1bd35e-2da0-44cc-8a16-2bc8be249d85 page stack"}
