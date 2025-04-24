@@ -1,43 +1,38 @@
-{"level":30,"time":"2025-04-13T12:10:04.787Z","pid":2916,"hostname":"GOAT","msg":"Listening on 65026"}
-(node:2916) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-04-24T08:16:43.552Z","pid":8296,"hostname":"GOAT","msg":"Listening on 60575"}
+(node:8296) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-04-13T12:10:04.895Z","pid":2916,"hostname":"GOAT","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-04-13T12:10:05.031Z","pid":2916,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
-{"level":30,"time":"2025-04-13T12:10:05.032Z","pid":2916,"hostname":"GOAT","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-04-13T12:10:05.032Z","pid":2916,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-04-13T12:10:05.037Z","pid":2916,"hostname":"GOAT","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-04-13T12:10:05.037Z","pid":2916,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2025-04-13T12:10:05.046Z","pid":2916,"hostname":"GOAT","msg":"Changed active context"}
-{"level":30,"time":"2025-04-13T12:10:05.158Z","pid":2916,"hostname":"GOAT","msg":"Video path: undefined"}
-{"level":30,"time":"2025-04-13T12:10:05.158Z","pid":2916,"hostname":"GOAT","msg":"Changed active page"}
-{"level":30,"time":"2025-04-13T12:10:05.220Z","pid":2916,"hostname":"GOAT","msg":"End of node method newPage"}
-{"level":30,"time":"2025-04-13T12:10:05.224Z","pid":2916,"hostname":"GOAT","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2025-04-13T12:10:05.225Z","pid":2916,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=user-menu-trigger in page."}
-{"level":30,"time":"2025-04-13T12:10:07.231Z","pid":2916,"hostname":"GOAT","msg":"Error of node method  waitForElementState"}
+{"level":30,"time":"2025-04-24T08:16:44.003Z","pid":8296,"hostname":"GOAT","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-04-24T08:16:44.286Z","pid":8296,"hostname":"GOAT","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-04-24T08:16:44.286Z","pid":8296,"hostname":"GOAT","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-04-24T08:16:44.286Z","pid":8296,"hostname":"GOAT","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-04-24T08:16:44.291Z","pid":8296,"hostname":"GOAT","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-04-24T08:16:44.292Z","pid":8296,"hostname":"GOAT","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-04-24T08:16:44.299Z","pid":8296,"hostname":"GOAT","msg":"Changed active context"}
+{"level":30,"time":"2025-04-24T08:16:44.405Z","pid":8296,"hostname":"GOAT","msg":"Video path: undefined"}
+{"level":30,"time":"2025-04-24T08:16:44.405Z","pid":8296,"hostname":"GOAT","msg":"Changed active page"}
+{"level":30,"time":"2025-04-24T08:16:46.756Z","pid":8296,"hostname":"GOAT","msg":"Error of node method  newPage"}
 ================= Original suppressed error =================
-locator.waitFor: Timeout 2000ms exceeded.
+page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:5173/
 Call log:
-[2m  - waiting for locator('id=user-menu-trigger') to be visible[22m
-[2m    9 × locator resolved to hidden <div id="user-menu-trigger" class="user-menu-trigger">…</div>[22m
+[2m  - navigating to "http://localhost:5173/", waiting until "load"[22m
 
-    at waitForElementState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:11283:19)
-    at async PlaywrightServer.waitForElementsState (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
-  name: 'TimeoutError'
+    at newPage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:12567:18)
+    at async PlaywrightServer.newPage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:28) {
+  name: 'Error'
 }
 =============================================================
-{"level":30,"time":"2025-04-13T12:10:07.245Z","pid":2916,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-04-13T12:10:07.245Z","pid":2916,"hostname":"GOAT","Take screenshot with options: ":{"path":"C:\\KOULU\\Koodi\\Projekti_WEBDEV\\outputs\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-04-13T12:10:07.437Z","pid":2916,"hostname":"GOAT","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-04-13T12:10:07.444Z","pid":2916,"hostname":"GOAT","msg":"Start of node method click"}
-{"level":30,"time":"2025-04-13T12:10:07.444Z","pid":2916,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
-{"level":30,"time":"2025-04-13T12:10:07.464Z","pid":2916,"hostname":"GOAT","msg":"End of node method click"}
-{"level":30,"time":"2025-04-13T12:10:07.467Z","pid":2916,"hostname":"GOAT","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-04-13T12:10:07.467Z","pid":2916,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-username in page."}
-{"level":30,"time":"2025-04-13T12:10:07.473Z","pid":2916,"hostname":"GOAT","msg":"End of node method fillText"}
-{"level":30,"time":"2025-04-13T12:10:07.476Z","pid":2916,"hostname":"GOAT","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-04-13T12:10:07.476Z","pid":2916,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with id=login-password in page."}
-{"level":30,"time":"2025-04-13T12:10:07.482Z","pid":2916,"hostname":"GOAT","msg":"End of node method fillText"}
-{"level":30,"time":"2025-04-13T12:10:07.486Z","pid":2916,"hostname":"GOAT","msg":"Start of node method click"}
-{"level":30,"time":"2025-04-13T12:10:07.486Z","pid":2916,"hostname":"GOAT","msg":"Strict mode is enabled, find Locator with css=form#login-form button[type=\"submit\"] in page."}
-{"level":30,"time":"2025-04-13T12:10:08.286Z","pid":2916,"hostname":"GOAT","msg":"End of node method click"}
-{"level":30,"time":"2025-04-13T12:21:15.874Z","pid":2916,"hostname":"GOAT","msg":"Removed page=145dc566-9da8-4c93-88ef-76ba8dd2d2c9 from context=98bece5b-75f7-48b6-b5f7-87ce6f38a81a page stack"}
+{"level":30,"time":"2025-04-24T08:16:46.778Z","pid":8296,"hostname":"GOAT","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\index.js:13132:34)
+    at Object.onReceiveHalfClose (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\KOULU\Koodi\Projekti_WEBDEV\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-04-24T08:16:46.778Z","pid":8296,"hostname":"GOAT","msg":"Error of node method  takeScreenshot"}
